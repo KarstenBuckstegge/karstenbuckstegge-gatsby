@@ -9,7 +9,9 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "dotenv": "^6.2.0",
     "gatsby": "^2.0.33",
+    "gatsby-source-contentful": "^2.0.19",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "yarn": "^1.12.3"
