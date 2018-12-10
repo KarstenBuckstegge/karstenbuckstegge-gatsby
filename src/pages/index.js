@@ -9,13 +9,8 @@ const Homepage = () => (
                     title
                     subtitle
                     description {
-                        content {
-                            content {
-                                value
-                                marks {
-                                    type
-                                }
-                            }
+                        childMarkdownRemark {
+                            html
                         }
                     }
                 }
@@ -27,7 +22,9 @@ const Homepage = () => (
                 contentfulContentBlock: {
                     title,
                     subtitle,
-                    description
+                    description: {
+                        childMarkdownRemark: { html }
+                    }
                 }
             } = contentBlock;
 
@@ -35,9 +32,7 @@ const Homepage = () => (
                 <section>
                     <h1>{title}</h1>
                     <h2>{subtitle}</h2>
-                    <p>
-                        {JSON.stringify(description)}
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: html }} />
                 </section>
             );
         }}
