@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import * as React from 'react';
 
 interface IndexPageProps {
@@ -6,7 +6,7 @@ interface IndexPageProps {
     contentfulContentBlock: {
       title: string;
       subtitle: string;
-      description: string;
+      description: any;
     };
   };
 }
