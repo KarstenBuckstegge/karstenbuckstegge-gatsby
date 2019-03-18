@@ -6,7 +6,11 @@ interface IndexPageProps {
     contentfulContentBlock: {
       title: string;
       subtitle: string;
-      description: any;
+      description: {
+        childMarkdownRemark: {
+          html: string;
+        };
+      };
     };
   };
 }
