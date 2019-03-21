@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 
 interface IndexPageProps {
@@ -44,6 +44,7 @@ class IndexPage extends React.Component<IndexPageProps, {}> {
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <p dangerouslySetInnerHTML={{ __html: html }} />
+        <Link to="/portfolio/">Portfolio</Link>
       </section>
     );
   }
