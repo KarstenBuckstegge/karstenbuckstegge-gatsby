@@ -26,6 +26,7 @@ module.exports = {
                 spaceId,
                 accessToken
             }
-        }
+        },
+        "gatsby-plugin-sass"
     ]
 }

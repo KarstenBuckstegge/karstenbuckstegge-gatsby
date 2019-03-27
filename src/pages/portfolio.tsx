@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import { PortfolioComponent } from '../components/PortfolioComponent';
+import { PortfolioComponent } from '../components/PortfolioComponent/PortfolioComponent';
 
 export interface Links {
   behance: string;
@@ -12,7 +12,6 @@ export interface Project {
   node: {
     title: string;
     type: string;
-    description: string;
     image: {
       file: {
         url: string;
@@ -42,7 +41,6 @@ export const portfolioContainerQuery = graphql`
         node {
           title
           type
-          description
           image {
             file {
               url
