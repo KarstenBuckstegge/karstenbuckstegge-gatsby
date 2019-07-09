@@ -1,12 +1,21 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# My personal portfolio website
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+Built with:
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+- gatsby
+- typescript
+- CSS-Modules
+- graph-ql
 
-## Running in development
-`gatsby develop`
+Getting data from **Contentful** and being deployed automatically to **netlify**.
+
+View the current state [here](https://wonderful-lamarr-bdcc3d.netlify.com/).
+
+Soon to be on [karstenbuckstegge.de](https://karstenbuckstegge.de).
+
+## CLI
+
+- `yarn start`: run project
+- `yarn start:ts`: run project with type checking
+- `yarn build`: build gatsby project
+- `type-check`: run type check
