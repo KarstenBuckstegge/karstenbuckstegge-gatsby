@@ -1,0 +1,8 @@
+@import '../../styles/constants';
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: $base * 5;
+    background-image: url('../../../static/grain.jpg');
+}

@@ -1,6 +1,8 @@
 import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 
+import { LayoutComponent } from '../components/layoutComponent/layoutComponent';
+
 interface IndexPageProps {
   data: {
     contentfulContentBlock: {
@@ -40,12 +42,14 @@ class IndexPage extends React.Component<IndexPageProps, {}> {
     } = this.props.data.contentfulContentBlock;
 
     return (
-      <section>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-        <p dangerouslySetInnerHTML={{ __html: html }} />
-        <Link to="/portfolio/">Portfolio</Link>
-      </section>
+      <LayoutComponent>
+        <section>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <p dangerouslySetInnerHTML={{ __html: html }} />
+          <Link to="/portfolio/">Portfolio</Link>
+        </section>
+      </LayoutComponent>
     );
   }
 }
