@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import { LayoutComponent } from '../components/layoutComponent/layoutComponent';
 import { PortfolioComponent } from '../components/PortfolioComponent/PortfolioComponent';
 
 export interface Links {
@@ -66,11 +65,7 @@ class PortfolioContainer extends React.Component<PortfolioProps, {}> {
   public render() {
     const projects = this.props.data.allContentfulProjectSummary.edges;
 
-    return (
-      <LayoutComponent>
-        <PortfolioComponent projects={projects} />
-      </LayoutComponent>
-    );
+    return <PortfolioComponent projects={projects} />;
   }
 }
 
