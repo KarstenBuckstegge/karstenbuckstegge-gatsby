@@ -8,3 +8,9 @@ html,
 body {
     min-height: 100vh;
 }
+
+body {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}

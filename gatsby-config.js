@@ -19,7 +19,6 @@ module.exports = {
                 allExtensions: true,
             },
         },
-        "gatsby-plugin-tslint",
         {
             resolve: "gatsby-source-contentful",
             options: {
@@ -27,6 +26,15 @@ module.exports = {
                 accessToken
             }
         },
+        {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                typekit: {
+                    id: 'qgf7sld'
+                }
+            }
+        },
+        "gatsby-plugin-tslint",
         "gatsby-plugin-sass"
     ]
 }
