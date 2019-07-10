@@ -1,0 +1,17 @@
+@import '../../styles/constants';
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    min-height: $headerHeight;
+    top: 0;
+    right: 0;
+    padding: 0 $base * 5;
+}
+
+.logo {
+    width: $base * 30;
+}

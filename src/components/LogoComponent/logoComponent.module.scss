@@ -1,5 +1,8 @@
+@import '../../styles/constants';
+
 .logo {
-    max-width: 200px;
+    min-width: $base * 20;
+    max-width: $base * 50;
 }
 
 .link {
@@ -17,7 +20,7 @@
             fill: transparent;
             stroke-dasharray: 700;
             stroke-dashoffset: 0;
-            stroke-width: 1px;
+            stroke-width: 1.5px;
 
             @for $i from 1 through 12 {
                 &:nth-child(#{$i}) {

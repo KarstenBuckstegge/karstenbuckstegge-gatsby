@@ -1,8 +1,10 @@
 @import '../../styles/constants';
 
+$layoutPadding: $base * 5;
+
 .main {
     width: 100%;
     min-height: 100vh;
-    padding: $base * 5;
+    padding: ($headerHeight + $layoutPadding) $layoutPadding $layoutPadding;
     background-image: url('../../../static/grain.jpg');
 }
