@@ -1,13 +1,16 @@
 import * as React from 'react';
 
+import classnames from 'classnames';
+
 import styles from './logoComponent.module.scss';
 
 interface Props {
   link?: string;
+  className?: string;
 }
 
-const logo = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="57 33 166.788 53.649" className={styles.logo}>
+const logo = (className?: string) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="57 33 166.788 53.649" className={classnames(className, styles.logo)}>
     <g id="logo_web" transform="translate(55.064 31.005)">
       <path
         id="Path_3"
@@ -73,14 +76,14 @@ const logo = () => (
   </svg>
 );
 
-export const LogoComponent: React.StatelessComponent<Props> = ({ link }) => {
+export const LogoComponent: React.StatelessComponent<Props> = ({ className, link }) => {
   if (link) {
     return (
       <a href={link} className={styles.link}>
-        {logo()}
+        {logo(className)}
       </a>
     );
   }
 
-  return logo();
+  return logo(className);
 };
