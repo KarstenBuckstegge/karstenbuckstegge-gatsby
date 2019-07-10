@@ -1,0 +1,39 @@
+.logo {
+    max-width: 200px;
+}
+
+.link {
+    color: currentColor;
+
+    .logo path {
+        fill: currentColor;
+        stroke-width: 0;
+
+        transition: fill .8s ease;
+    }
+
+    &:hover {
+        .logo path {
+            fill: transparent;
+            stroke-dasharray: 700;
+            stroke-dashoffset: 0;
+            stroke-width: 1px;
+
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    stroke: rgb(random(155) + 100, random(155) + 100, random(155) + 100);
+                }
+            }
+
+            stroke: currentColor;
+
+            animation: path-movement 4s infinite linear;
+        }
+    }
+}
+
+@keyframes path-movement {
+    to {
+        stroke-dashoffset: 1400;
+    }
+}
