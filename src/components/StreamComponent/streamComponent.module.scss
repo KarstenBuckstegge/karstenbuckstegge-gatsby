@@ -1,4 +1,11 @@
+@import '../../styles/constants';
+
 .stream {
+    position: absolute;
+    top: $headerHeight;
+    left: 0;
+    pointer-events: none;
+
     image {
         overflow: visible;
     }

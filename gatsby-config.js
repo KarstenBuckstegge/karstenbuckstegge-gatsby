@@ -34,6 +34,14 @@ module.exports = {
                 }
             }
         },
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /svg/
+                }
+            }
+        },
         "gatsby-plugin-tslint",
         "gatsby-plugin-sass"
     ]

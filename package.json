@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "dotenv": "^8.0.0",
     "gatsby": "2.13.10",
+    "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-typescript": "2.1.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",

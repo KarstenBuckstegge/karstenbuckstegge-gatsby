@@ -1,0 +1,63 @@
+@import '../../styles/constants';
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    margin-left: 5vw;
+    height: 48vw;
+}
+
+.title {
+    margin-top: -3vw;
+    font-size: $fontSizeHuge;
+    font-weight: 200;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: $fontSizeBig;
+    font-weight: 200;
+    text-align: center;
+}
+
+.hr {
+    width: 50%;
+    color: $green;
+}
+
+.names {
+    line-height: 4em;
+}
+
+.firstName {
+    padding: 0 10%;
+}
+
+.letter {
+    display: inline-block;
+    margin: 0 1.5vw;
+    transition: transform 1s, margin 1s;
+}
+
+@for $i from 1 to 7 {
+    .firstNameLetter#{$i} {
+        transform: translateY(#{(random(30) - 15) / 10}em);
+    }
+}
+
+@for $i from 1 to 9 {
+    .lastNameLetter#{$i} {
+        transform: translateY(#{(random(30) - 15) / 10}em);
+    }
+}
+
+.title {
+    &:hover {
+        .letter {
+            margin: 0;
+            transform: translateY(0);
+        }
+    }
+}
