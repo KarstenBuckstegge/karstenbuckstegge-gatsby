@@ -1,0 +1,40 @@
+@import '../../styles/constants';
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+
+    &+& {
+        margin-left: $base * 15;
+    }
+}
+
+.item {
+    color: $grey;
+
+    transition: color $transition;
+
+    &:hover {
+        color: darken($grey, 10);
+    }
+}
+
+.portfolio {
+    color: $green;
+
+    &:hover {
+        color: darken($green, 10);
+    }
+}
+
+.about {
+    color: $blue;
+
+    &:hover {
+        color: darken($blue, 10);
+    }
+}
