@@ -10,6 +10,7 @@ interface Props {
 
 export const LayoutComponent: React.StatelessComponent<Props> = ({ children }) => (
   <main className={styles.main}>
+    <div className={styles.grain} />
     <HeaderComponent />
     {children}
   </main>

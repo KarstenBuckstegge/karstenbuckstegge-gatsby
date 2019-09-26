@@ -35,11 +35,7 @@ export const indexPageQuery = graphql`
 
 class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
-    return (
-      <section>
-        <IndexComponent data={this.props.data.contentfulContentBlock} />
-      </section>
-    );
+    return <IndexComponent />;
   }
 }
 
