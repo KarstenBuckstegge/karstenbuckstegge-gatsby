@@ -1,0 +1,30 @@
+@import '../../styles/constants';
+
+$buttonOffset: $base * 5;
+
+.p {
+    margin-bottom: $base * 10;
+    font-weight: 800;
+    line-height: $lineHeight;
+}
+
+.green {
+    color: $green;
+}
+
+.pink {
+    color: $pink;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.portfolio {
+    margin-left: $base * 5;
+}
+
+.contact {
+    margin-top: $buttonOffset;
+    margin-left: $base * 20;
+}

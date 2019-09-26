@@ -1,0 +1,47 @@
+@import '../../styles/constants';
+
+.button {
+    position: relative;
+    height: 100%;
+    padding: $base*4 $base*5;
+    border: 3px solid currentColor;
+    border-radius: 12px;
+    font-size: $fontSizeBase;
+    font-weight: 400;
+    cursor: pointer;
+
+    transition: color $transition;
+
+    outline: none;
+    box-shadow: none;
+}
+
+.green {
+    color: $green;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($green, 10);
+    }
+}
+
+.pink {
+    color: $pink;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($pink, 10);
+    }
+}
+
+.grey {
+    color: $grey;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($grey, 20);
+    }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/constants';
+
+.about {
+    position: absolute;
+    right: 5vw;
+    top: $streamWidth * 1.07;
+    width: $streamWidth * .42;
+    max-height: $streamWidth * .40;
+}
