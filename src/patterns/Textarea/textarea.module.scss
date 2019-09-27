@@ -1,0 +1,46 @@
+@import '../../styles/constants';
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: $base * 10;
+    margin-top: $base * 7;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: $base * 2;
+    transform: translate(0, 6px);
+    pointer-events: none;
+
+    transition: transform $transition;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    padding: $base $base*3 0;
+    font-weight: 400;
+    font-size: $fontSizeSmall;
+    background-color: transparent;
+    color: $grey;
+
+    &:focus,
+    &.filled {
+        min-height: 100px;
+
+        &+.label {
+            transform: translate(-#{$base*2}, -#{$base*5}) scale(.85);
+        }
+    }
+}
