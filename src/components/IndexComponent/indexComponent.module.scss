@@ -7,3 +7,10 @@
     width: $streamWidth * .42;
     max-height: $streamWidth * .40;
 }
+
+.contact {
+    position: absolute;
+    left: 5vw;
+    top: $streamWidth * 1.83;
+    width: $streamWidth * .5;
+}

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { LayoutComponent } from '../LayoutComponent/LayoutComponent';
 
 import { AboutComponent } from '../AboutComponent/AboutComponent';
+import { ContactComponent } from '../ContactComponent/ContactComponent';
 import { IntroComponent } from '../IntroComponent/IntroComponent';
 import { StreamComponent } from '../StreamComponent/streamComponent';
 
@@ -13,5 +14,6 @@ export const IndexComponent: React.StatelessComponent<{}> = () => (
     <StreamComponent />
     <IntroComponent />
     <AboutComponent className={styles.about} />
+    <ContactComponent className={styles.contact} />
   </LayoutComponent>
 );
