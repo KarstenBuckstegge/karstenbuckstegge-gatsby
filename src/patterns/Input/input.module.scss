@@ -1,0 +1,58 @@
+@import '../../styles/constants';
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: $base * 10;
+    margin-top: $base * 7;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: $base * 2;
+    transform: translate(0, 6px);
+    pointer-events: none;
+
+    transition: transform $transition;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: $base * 2;
+    left: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 $base*3;
+    font-weight: 400;
+    font-size: $fontSizeSmall;
+    background-color: transparent;
+    color: $grey;
+
+    // Reset hard autofill styles set by webkit
+    // https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: $grey;
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+        box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    &:focus,
+    &.filled {
+        &+.label {
+            transform: translate(-#{$base*2}, -#{$base*5}) scale(.85);
+        }
+    }
+}
