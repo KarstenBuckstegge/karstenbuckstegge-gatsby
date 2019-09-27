@@ -45,3 +45,9 @@
         color: darken($grey, 20);
     }
 }
+
+.small {
+    padding: $base*2 $base*5;
+    font-size: $fontSizeSmall;
+    border-width: 2px;
+}
