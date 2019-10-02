@@ -1,5 +1,7 @@
 @import '../../styles/constants';
 
+$scrollThreshold: 0;
+
 .stream {
     position: absolute;
     top: $headerHeight;
@@ -12,6 +14,7 @@
     }
 }
 
+// COLORS
 .st0 {
     fill: #873D45;
 }
@@ -162,4 +165,160 @@
 
 .st37 {
     fill: #0B0A0A;
+}
+
+// ELEMENTS
+.monster {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 0}) * 0.1);
+}
+
+.whale_1 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 8}) * 0.1);
+}
+
+.rhino {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 10}) * 0.1);
+}
+
+.tentacle_1 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 12}) * 0.1);
+}
+
+.dude {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 13}) * 0.1);
+}
+
+.bird {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 14}) * 0.1);
+}
+
+.center_dude {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 15}) * 0.1);
+}
+
+.huh {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 17}) * 0.1);
+}
+
+.tentacle_2 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 17}) * 0.1);
+}
+
+.flat_bird {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 18}) * 0.1);
+}
+
+.tophat {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 18}) * 0.1);
+}
+
+.worm {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 20}) * 0.1);
+}
+
+.dino {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 22}) * 0.1);
+}
+
+.snake {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 24}) * 0.1);
+}
+
+.angry_bird {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 24}) * 0.1);
+}
+
+.eye {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 26}) * 0.1);
+}
+
+.look {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 28}) * 0.1);
+}
+
+
+.center_1 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 28}) * 0.1);
+}
+
+.center_2 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 30}) * 0.1);
+}
+
+.center_3 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 32}) * 0.1);
+}
+
+.center_5 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 37}) * 0.1);
+}
+
+.center_4 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 41}) * 0.1);
+}
+
+.center_6 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 45}) * 0.1);
+}
+
+.center_7 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 48}) * 0.1);
+}
+
+.center_8 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 52}) * 0.1);
+}
+
+
+
+.tucan {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 55}) * 0.1);
+}
+
+.big_ears {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 58}) * 0.1);
+}
+
+.moustache {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 58}) * 0.1);
+}
+
+.mini_alien {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 58}) * 0.1);
+}
+
+.smile {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 60}) * 0.1);
+}
+
+.plane {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 60}) * 0.1);
+}
+
+.alien {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 62}) * 0.1);
+}
+
+.yellow_fish {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 64}) * 0.1);
+}
+
+.long_bird {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 66}) * 0.1);
+}
+
+.long_fish {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 68}) * 0.1);
+}
+
+.whale {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 70}) * 0.1);
+}
+
+.snake_1 {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 70}) * 0.1);
+}
+
+.moon {
+    opacity: calc(((var(--scrollPostition) * 100) - #{$scrollThreshold + 72}) * 0.1);
 }
