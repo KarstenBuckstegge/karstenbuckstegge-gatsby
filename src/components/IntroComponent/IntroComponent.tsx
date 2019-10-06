@@ -6,9 +6,13 @@ import HR from '../../../svg/hr.svg';
 
 import styles from './introComponent.module.scss';
 
-export const IntroComponent: React.StatelessComponent<{}> = () => {
+interface Props {
+  className?: string;
+}
+
+export const IntroComponent: React.StatelessComponent<Props> = props => {
   return (
-    <section className={styles.intro}>
+    <section className={classnames(props.className, styles.intro)} id="introSection">
       <h1 className={styles.title}>
         <div className={classnames(styles.names, styles.firstName)}>
           <span className={classnames(styles.letter, styles.firstNameLetter1)}>K</span>

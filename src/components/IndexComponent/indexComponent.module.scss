@@ -1,5 +1,9 @@
 @import '../../styles/constants';
 
+.section {
+    padding-top: $headerHeight + $base*2;
+}
+
 .about {
     position: absolute;
     right: 5vw;

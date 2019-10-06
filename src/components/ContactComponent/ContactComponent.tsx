@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const ContactComponent: React.StatelessComponent<Props> = props => (
-  <section className={props.className}>
+  <section className={props.className} id="contactSection">
     <Headline>talk to me...</Headline>
     <form className={styles.form} action="">
       <Input type="text" name="name" id="name" label="Name" autoComplete="name" required={true} />
