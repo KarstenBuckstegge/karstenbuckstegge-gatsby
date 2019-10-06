@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 import { Button } from '../../patterns/Button/Button';
 import { Headline } from '../../patterns/Headline/Headline';
+import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 
 import styles from './aboutComponent.module.scss';
 
@@ -26,9 +27,9 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
       <Button type="button" color="green" className={styles.portfolio}>
         visit my portfolio
       </Button>
-      <Button type="button" color="grey" className={styles.contact}>
+      <LinkButton href="/#contactSection" color="grey" className={styles.contact}>
         contact me
-      </Button>
+      </LinkButton>
     </div>
   </section>
 );
