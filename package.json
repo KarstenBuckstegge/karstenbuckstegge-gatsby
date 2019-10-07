@@ -27,6 +27,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-obfuscate": "^3.6.2",
     "react-resize-detector": "^4.2.1",
     "smooth-scroll": "^16.1.0",
     "typescript": "3.5.3",

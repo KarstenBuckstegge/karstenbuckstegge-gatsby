@@ -34,18 +34,18 @@ export class Textarea extends React.Component<Props> {
 
     return (
       <div className={classes}>
-        <textarea className={textareaClasses} name={name} id={id} cols={cols} rows={rows} />
+        <textarea className={textareaClasses} name={name} id={id} cols={cols} rows={rows} onChange={this.onChange} />
         <label className={styles.label}>{label}</label>
         <FormSVG className={styles.underline} />
       </div>
     );
   }
 
-  //   private onChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
-  //     const value = event.currentTarget.value;
+  private onChange = (event: React.SyntheticEvent<HTMLTextAreaElement>) => {
+    const value = event.currentTarget.value;
 
-  //     this.setState({
-  //       filled: value.length > 0
-  //     });
-  //   };
+    this.setState({
+      filled: value.length > 0
+    });
+  };
 }
