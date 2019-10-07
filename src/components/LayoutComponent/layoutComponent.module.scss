@@ -1,0 +1,22 @@
+@import '../../styles/constants';
+
+$layoutPadding: $base * 5;
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: (11400 / 5000) * $streamWidth; // 11400/5000 ratio of stream svg
+    padding: ($headerHeight + $layoutPadding) $layoutPadding $layoutPadding;
+}
+
+.grain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../../../static/grain.png');
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.3;
+}
