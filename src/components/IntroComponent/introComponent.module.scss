@@ -37,27 +37,27 @@
 
 .letter {
     display: inline-block;
-    margin: 0 1.5vw;
+    margin: 0;
+    transform: translateY(0);
     transition: transform 1s, margin 1s;
-}
-
-@for $i from 1 to 7 {
-    .firstNameLetter#{$i} {
-        transform: translateY(#{(random(30) - 15) / 10}em);
-    }
-}
-
-@for $i from 1 to 9 {
-    .lastNameLetter#{$i} {
-        transform: translateY(#{(random(30) - 15) / 10}em);
-    }
 }
 
 .title {
     &:hover {
         .letter {
-            margin: 0;
-            transform: translateY(0);
+            margin: 0 1.5vw;
+        }
+
+        @for $i from 1 to 7 {
+            .firstNameLetter#{$i} {
+                transform: translateY(#{(random(30) - 15) / 10}em);
+            }
+        }
+
+        @for $i from 1 to 9 {
+            .lastNameLetter#{$i} {
+                transform: translateY(#{(random(30) - 15) / 10}em);
+            }
         }
     }
 }
