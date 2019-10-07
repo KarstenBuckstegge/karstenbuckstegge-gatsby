@@ -9,9 +9,9 @@ interface Props {
 }
 
 export const LayoutComponent: React.StatelessComponent<Props> = ({ children }) => {
-  require('smooth-scroll')('a[href*="#"]', {
-    speed: 600
-  });
+  // require('smooth-scroll')('a[href*="#"]', {
+  //   speed: 600
+  // });
 
   return (
     <main className={styles.main}>
