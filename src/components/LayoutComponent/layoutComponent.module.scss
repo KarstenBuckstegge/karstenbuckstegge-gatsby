@@ -20,3 +20,16 @@ $layoutPadding: $base * 5;
     z-index: 9999;
     opacity: 0.3;
 }
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

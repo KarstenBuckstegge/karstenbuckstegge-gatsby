@@ -19,7 +19,41 @@ import styles from './streamComponent.module.scss';
 
 interface Props {
   scrollPosition: number;
+  imageLoaded: () => void;
 }
+
+type AllImages =
+  | 'bottom_outlines'
+  | 'center_1'
+  | 'center_2'
+  | 'center_3'
+  | 'center_4'
+  | 'center_5'
+  | 'center_6'
+  | 'center_7'
+  | 'center_8'
+  | 'center_borders'
+  | 'center_outlines'
+  | 'top_lights'
+  | 'top_outlines'
+  | 'top_shadows';
+
+export const allImages: AllImages[] = [
+  bottom_outlines,
+  center_1,
+  center_2,
+  center_3,
+  center_4,
+  center_5,
+  center_6,
+  center_7,
+  center_8,
+  center_borders,
+  center_outlines,
+  top_lights,
+  top_outlines,
+  top_shadows
+];
 
 export const StreamComponent: React.StatelessComponent<Props> = props => {
   const style = { '--scrollPostition': props.scrollPosition } as React.CSSProperties;
@@ -925,6 +959,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x31__colors_Image"
             xlinkHref={center_1}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 2089.4204 4197.7026)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_2" className={styles.center_2}>
@@ -934,6 +969,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x32__colors_Image"
             xlinkHref={center_2}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1735.7974 4178.5532)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_3" className={styles.center_3}>
@@ -943,6 +979,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x33__colors_Image"
             xlinkHref={center_3}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 3079.8098 4598.5181)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_4" className={styles.center_4}>
@@ -952,6 +989,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x34__colors_Image"
             xlinkHref={center_4}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1626.384 5370.5928)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_5" className={styles.center_5}>
@@ -961,6 +999,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x35__colors_Image"
             xlinkHref={center_5}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 2281.5513 4982.1626)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_6" className={styles.center_6}>
@@ -970,6 +1009,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x36__colors_Image"
             xlinkHref={center_6}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1587.7759 5899.2085)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_7" className={styles.center_7}>
@@ -979,6 +1019,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x37__colors_Image"
             xlinkHref={center_7}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 2608.2725 6044.6348)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="center_8" className={styles.center_8}>
@@ -988,6 +1029,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="_x38__colors_Image"
             xlinkHref={center_8}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1516.0128 6610.7168)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="outlines">
@@ -997,6 +1039,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="outlines_Image"
             xlinkHref={center_outlines}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1822.1543 4165.6118)"
+            onLoad={props.imageLoaded}
           />
         </g>
         <g id="borders">
@@ -1006,6 +1049,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="borders_Image"
             xlinkHref={center_borders}
             transform="matrix(0.9966 8.224769e-02 -8.224769e-02 0.9966 1703.1462 4160.8076)"
+            onLoad={props.imageLoaded}
           />
         </g>
       </g>
@@ -1041,6 +1085,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
             id="outlines_Image_1"
             xlinkHref={bottom_outlines}
             transform="matrix(1.6054 4.456363e-02 -4.456363e-02 1.6054 2303.2495 6802.7949)"
+            onLoad={props.imageLoaded}
           />
         </g>
       </g>
@@ -1052,6 +1097,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
           id="Layer_5_2"
           xlinkHref={top_shadows}
           transform="matrix(0.9973 4.931239e-02 -4.931239e-02 0.9973 2510.469 1442.2322)"
+          onLoad={props.imageLoaded}
         />
 
         <image
@@ -1060,6 +1106,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
           id="Char_1_2"
           xlinkHref={top_outlines}
           transform="matrix(0.9973 4.931239e-02 -4.931239e-02 0.9973 2510.469 1442.2322)"
+          onLoad={props.imageLoaded}
         />
 
         <image
@@ -1069,6 +1116,7 @@ export const StreamComponent: React.StatelessComponent<Props> = props => {
           id="Layer_6_2"
           xlinkHref={top_lights}
           transform="matrix(0.9973 4.931239e-02 -4.931239e-02 0.9973 2510.469 1442.2322)"
+          onLoad={props.imageLoaded}
         />
       </g>
       <g id="dude_1">

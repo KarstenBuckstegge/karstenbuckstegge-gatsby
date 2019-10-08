@@ -10,11 +10,27 @@ import { LayoutComponent } from '../LayoutComponent/LayoutComponent';
 
 import styles from './indexComponent.module.scss';
 
-export const IndexComponent: React.StatelessComponent<{}> = () => (
-  <LayoutComponent>
-    <Stream />
-    <IntroComponent className={styles.section} />
-    <AboutComponent className={classnames(styles.section, styles.about)} />
-    <ContactComponent className={classnames(styles.section, styles.contact)} />
-  </LayoutComponent>
-);
+interface State {
+  loading: boolean;
+}
+
+export class IndexComponent extends React.Component<{}, State> {
+  public state = { loading: true };
+
+  public render() {
+    return (
+      <LayoutComponent loading={this.state.loading}>
+        <Stream onLoad={this.onLoadStream} />
+        <IntroComponent className={styles.section} />
+        <AboutComponent className={classnames(styles.section, styles.about)} />
+        <ContactComponent className={classnames(styles.section, styles.contact)} />
+      </LayoutComponent>
+    );
+  }
+
+  private onLoadStream = () => {
+    this.setState({
+      loading: false
+    });
+  };
+}
