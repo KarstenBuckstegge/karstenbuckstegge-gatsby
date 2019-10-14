@@ -9,6 +9,10 @@ $layoutPadding: $base * 5;
     padding: ($headerHeight + $layoutPadding) $layoutPadding $layoutPadding;
 }
 
+.content {
+    opacity: 1;
+}
+
 .grain {
     position: absolute;
     top: 0;
@@ -21,15 +25,8 @@ $layoutPadding: $base * 5;
     opacity: 0.3;
 }
 
-.loading {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-}
-
 .hidden {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
+    transition: opacity 2s ease;
 }

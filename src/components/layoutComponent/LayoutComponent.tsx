@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
+import { Loading } from '../../patterns/Loading/Loading';
 import { HeaderComponent } from '../HeaderComponent/HeaderComponent';
 
 import styles from './layoutComponent.module.scss';
@@ -18,8 +19,9 @@ export const LayoutComponent: React.StatelessComponent<Props> = ({ children, loa
 
   return (
     <main className={styles.main}>
-      <div className={classnames(styles.loading, { [styles.hidden]: !loading })}>LOADING!!</div>
-      <div className={classnames({ [styles.hidden]: loading })}>
+      <Loading className={classnames({ [styles.hidden]: !loading })} />
+
+      <div className={classnames(styles.content, { [styles.hidden]: loading })}>
         <div className={styles.grain} />
         <HeaderComponent />
         {children}
