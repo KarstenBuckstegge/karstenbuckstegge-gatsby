@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 
 import classnames from 'classnames';
@@ -13,17 +14,26 @@ interface OwnProps {
 interface LinkButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   className?: string;
   href: string;
+  internal?: boolean;
 }
 
 type Props = OwnProps & LinkButtonProps;
 
 export const LinkButton: React.StatelessComponent<Props> = props => {
-  const { children, className, type, color, size, href } = props;
+  const { children, className, color, size, href, internal } = props;
 
   const classes = classnames(ButtonStyles.button, styles.linkButton, className, color && ButtonStyles[color], size && ButtonStyles[size]);
 
+  if (internal) {
+    return (
+      <Link className={classes} to={href}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a className={classes} type={type} href={href}>
+    <a className={classes} href={href}>
       {children}
     </a>
   );
