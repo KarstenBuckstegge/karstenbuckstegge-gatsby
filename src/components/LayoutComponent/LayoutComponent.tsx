@@ -8,11 +8,12 @@ import { HeaderComponent } from '../HeaderComponent/HeaderComponent';
 import styles from './layoutComponent.module.scss';
 
 interface Props {
+  secondaryPage?: boolean;
   loading?: boolean;
   children: React.ReactNode;
 }
 
-export const LayoutComponent: React.StatelessComponent<Props> = ({ children, loading }) => {
+export const LayoutComponent: React.StatelessComponent<Props> = ({ secondaryPage, children, loading }) => {
   // require('smooth-scroll')('a[href*="#"]', {
   //   speed: 600
   // });
@@ -23,7 +24,7 @@ export const LayoutComponent: React.StatelessComponent<Props> = ({ children, loa
 
       <div className={classnames(styles.content, { [styles.hidden]: loading })}>
         <div className={styles.grain} />
-        <HeaderComponent />
+        <HeaderComponent secondaryPage={secondaryPage} />
         {children}
       </div>
     </main>

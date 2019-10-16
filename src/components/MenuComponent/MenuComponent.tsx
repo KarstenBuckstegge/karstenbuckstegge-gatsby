@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 
 import classnames from 'classnames';
@@ -6,9 +7,9 @@ import styles from './menuComponent.module.scss';
 
 export const MenuComponent: React.StatelessComponent = () => (
   <ul className={styles.menu}>
-    <a href="#" className={styles.link}>
+    <Link to="portfolio" className={styles.link}>
       <li className={classnames(styles.item, styles.portfolio)}>portfolio</li>
-    </a>
+    </Link>
     <a href="/#aboutSection" className={styles.link}>
       <li className={classnames(styles.item, styles.about)}>about me</li>
     </a>

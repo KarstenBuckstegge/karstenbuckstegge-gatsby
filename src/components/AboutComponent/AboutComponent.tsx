@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
-import { Button } from '../../patterns/Button/Button';
 import { Headline } from '../../patterns/Headline/Headline';
 import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 
@@ -24,9 +23,9 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
       ways to visualize your ideas on cavas, display, wall or whatever medium you can imagine.
     </p>
     <div className={styles.buttonContainer}>
-      <Button type="button" color="green" className={styles.portfolio}>
+      <LinkButton internal={true} href="portfolio" type="button" color="green" className={styles.portfolio}>
         visit my portfolio
-      </Button>
+      </LinkButton>
       <LinkButton href="/#contactSection" color="grey" className={styles.contact}>
         contact me
       </LinkButton>

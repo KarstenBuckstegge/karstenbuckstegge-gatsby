@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const PortfolioComponent = (props: Props) => (
-  <LayoutComponent>
+  <LayoutComponent secondaryPage={true}>
     <ul>
       {props.projects.map(project => (
         <div className={styles.wrapper} key={project.node.title}>
