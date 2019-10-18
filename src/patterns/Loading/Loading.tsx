@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import styles from './loading.module.scss';
 
-import LoadingSVG from '../../../svg/Loading.svg';
+import LoadingSVG from '../../../svg/loading.svg';
 
 interface Props {
   className?: string;
