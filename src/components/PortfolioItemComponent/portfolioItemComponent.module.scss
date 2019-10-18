@@ -2,10 +2,6 @@
 
 $gridGutter: $base * 5;
 
-.grid {
-    width: 90vw;
-}
-
 .gridItem {
     width: calc(30vw - #{$gridGutter});
     margin-bottom: $base * 5;

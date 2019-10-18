@@ -9,10 +9,7 @@ interface Props {
 }
 
 export const ProjectComponent = (props: Props) => {
-  const { image, info, title, links, type } = props.project.node;
-
-  // tslint:disable-next-line:no-console
-  console.log('TYPE:', type);
+  const { createdAt, image, info, title, links, type } = props.project.node;
 
   return (
     <div className={styles.wrapper}>

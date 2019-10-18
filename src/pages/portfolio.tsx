@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import { PortfolioComponent } from '../components/PortfolioComponent/PortfolioComponent';
+import { Portfolio } from '../containers/PortfolioContainer/PortfolioContainer';
 
 export interface Links {
   behance: string;
@@ -16,6 +16,7 @@ export interface Project {
     title: string;
     type: ProjectTypes[];
     info: string;
+    createdAt: string;
     image: {
       file: {
         url: string;
@@ -41,6 +42,7 @@ export const portfolioContainerQuery = graphql`
           title
           type
           info
+          createdAt
           image {
             file {
               url
@@ -61,7 +63,7 @@ class PortfolioContainer extends React.Component<PortfolioProps, {}> {
   public render() {
     const projects = this.props.data.allContentfulProject.edges;
 
-    return <PortfolioComponent projects={projects} />;
+    return <Portfolio projects={projects} />;
   }
 }
 
