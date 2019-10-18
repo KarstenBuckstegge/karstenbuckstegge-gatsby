@@ -6,41 +6,41 @@ import { PortfolioComponent } from '../components/PortfolioComponent/PortfolioCo
 export interface Links {
   behance: string;
   instagram: string;
+  web: string;
 }
+
+export type ProjectTypes = 'illustration' | 'development' | 'mural' | 'experimental' | 'design';
 
 export interface Project {
   node: {
     title: string;
-    type: string;
+    type: ProjectTypes[];
+    info: string;
     image: {
       file: {
         url: string;
       };
     };
     links: Links;
-    video: {
-      file: {
-        url: string;
-      };
-    };
   };
 }
 
 interface PortfolioProps {
   data: {
-    allContentfulProjectSummary: {
+    allContentfulProject: {
       edges: Project[];
     };
   };
 }
 
 export const portfolioContainerQuery = graphql`
-  query ProjectSummary {
-    allContentfulProjectSummary {
+  query Project {
+    allContentfulProject {
       edges {
         node {
           title
           type
+          info
           image {
             file {
               url
@@ -49,11 +49,7 @@ export const portfolioContainerQuery = graphql`
           links {
             behance
             instagram
-          }
-          video {
-            file {
-              url
-            }
+            web
           }
         }
       }
@@ -63,7 +59,7 @@ export const portfolioContainerQuery = graphql`
 
 class PortfolioContainer extends React.Component<PortfolioProps, {}> {
   public render() {
-    const projects = this.props.data.allContentfulProjectSummary.edges;
+    const projects = this.props.data.allContentfulProject.edges;
 
     return <PortfolioComponent projects={projects} />;
   }

@@ -9,37 +9,28 @@ interface Props {
 }
 
 export const ProjectComponent = (props: Props) => {
-  const { image, video, title, links } = props.project.node;
+  const { image, info, title, links, type } = props.project.node;
 
-  const playVideo = async (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const videoElement = e.currentTarget;
-
-    try {
-      await videoElement.play();
-    } catch (error) {
-      // tslint:disable-next-line:no-console
-      console.error('could not play background video', error.message);
-    }
-  };
-  const stopVideo = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const videoElement = e.currentTarget;
-    videoElement.pause();
-  };
+  // tslint:disable-next-line:no-console
+  console.log('TYPE:', type);
 
   return (
-    <li className={styles.wrapper} style={{ backgroundImage: `url('https:${image.file.url}')` }}>
-      {video && (
-        <video className={styles.video} onMouseOver={playVideo} onMouseLeave={stopVideo} loop={true} muted={true}>
-          <source src={`https:${video.file.url}`} type="video/mp4" />
-        </video>
-      )}
+    <div className={styles.wrapper}>
+      <img className={styles.image} src={`https:${image.file.url}`} alt="title" />
       <h2 className={styles.title}>{title}</h2>
+      <div>INFO: {info}</div>
 
-      {Object.keys(links).map(link => (
-        <a key={link} href={links[link]} target="_blank">
-          {link}
-        </a>
-      ))}
-    </li>
+      {Object.keys(links).map(link => {
+        if (!links[link]) {
+          return;
+        }
+
+        return (
+          <a key={link} href={links[link]} target="_blank">
+            {link}
+          </a>
+        );
+      })}
+    </div>
   );
 };
