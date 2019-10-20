@@ -35,6 +35,12 @@ const hasFilteredType = (types: ProjectTypes[], filters: Filters) => {
   return filteredTypes.length > 0;
 };
 
+const orderItems = (items: Project[]) => {
+  return items.sort((itemA, itemB) => {
+    return new Date(itemA.node.createdAt).valueOf() - new Date(itemB.node.createdAt).valueOf();
+  });
+};
+
 export class PortfolioItems extends React.Component<Props, State> {
   public state: State = {
     activeFilters: {
@@ -66,26 +72,27 @@ export class PortfolioItems extends React.Component<Props, State> {
             gutter: 10
           }}
         >
-          {this.renderItems()}
+          {this.sortItems().map(item => (
+            <PortfolioItemComponent item={item} key={item.node.title} />
+          ))}
         </Masonry>
       </>
     );
   }
 
-  private renderItems() {
-    return this.filterItems();
+  private sortItems() {
+    const filteredItems = this.filterItems();
+
+    return orderItems(filteredItems);
   }
 
   private filterItems() {
-    return this.props.items.map(item => {
-      if (this.allFiltersOff()) {
-        return <PortfolioItemComponent item={item} key={item.node.title} />;
-      }
+    if (this.allFiltersOff()) {
+      return this.props.items;
+    }
 
-      if (hasFilteredType(item.node.type, this.state.activeFilters)) {
-        return <PortfolioItemComponent item={item} key={item.node.title} />;
-      }
-      return;
+    return this.props.items.filter(item => {
+      return hasFilteredType(item.node.type, this.state.activeFilters);
     });
   }
 
