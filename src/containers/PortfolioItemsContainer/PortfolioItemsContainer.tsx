@@ -107,10 +107,10 @@ export class PortfolioItems extends React.Component<Props, State> {
   }
 
   private onFilterClick(event: React.SyntheticEvent<HTMLButtonElement>) {
-    const filterName = event.currentTarget.innerHTML;
+    const filterName = event.currentTarget.dataset.name;
 
     const tempActiveFilters = this.state.activeFilters;
-    tempActiveFilters[filterName] = !this.state.activeFilters[filterName];
+    tempActiveFilters[filterName!] = !this.state.activeFilters[filterName!];
 
     this.setState({
       activeFilters: tempActiveFilters

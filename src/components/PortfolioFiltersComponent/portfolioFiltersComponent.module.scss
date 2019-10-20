@@ -1,3 +1,67 @@
-.active {
-    color: red;
+@import '../../styles/constants';
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: $base*10 0 $base*20;
+    padding: 0 $base*10;
+}
+
+.filterContainer {
+    position: relative;
+    padding: $base*4 $base*4;
+    font-size: $fontSizeBig;
+    font-weight: 200;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.underline {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-5%);
+
+    transition: color $transition;
+}
+
+.illustration,
+.mural,
+.design {
+
+    &:hover,
+    &:focus,
+    &.active {
+        .underline {
+            color: $lightGreen;
+        }
+    }
+}
+
+.development {
+
+    &:hover,
+    &:focus,
+    &.active {
+        .underline {
+            color: $lightBlue;
+        }
+    }
+}
+
+.experimental {
+
+    &:hover,
+    &:focus,
+    &.active {
+        .underline {
+            color: $lightPink;
+        }
+    }
 }

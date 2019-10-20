@@ -4,6 +4,8 @@ import classnames from 'classnames';
 
 import { FILTERS, Filters } from '../../containers/PortfolioItemsContainer/PortfolioItemsContainer';
 
+import HR from '../../../svg/hr.svg';
+
 import styles from './portfolioFiltersComponent.module.scss';
 
 interface Props {
@@ -12,17 +14,19 @@ interface Props {
 }
 
 export const PortfolioFiltersComponent: React.StatelessComponent<Props> = props => (
-  <>
+  <div className={styles.filters}>
     {FILTERS.map(filter => (
       <button
-        className={classnames(styles.filter, { [styles.active]: props.activeFilters[filter] })}
         type="button"
+        className={classnames(styles.filterContainer, styles[filter], { [styles.active]: props.activeFilters[filter] })}
         key={filter}
         onClick={props.onFilterClick}
+        data-name={filter}
       >
         {filter}
+
+        <HR className={styles.underline} />
       </button>
     ))}
-    ;
-  </>
+  </div>
 );
