@@ -37,7 +37,7 @@ export const IntroComponent: React.StatelessComponent<Props> = props => {
           <span className={classnames(styles.letter, styles.lastNameLetter9)}>E</span>
         </div>
       </Headline>
-      <h2 className={styles.subtitle}>Visual Artist</h2>
+      <Headline size="h2">Visual Artist</Headline>
     </section>
   );
 };
