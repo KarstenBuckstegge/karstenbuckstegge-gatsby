@@ -1,5 +1,12 @@
 @import '../../styles/constants';
 
+.h1 {
+    margin-bottom: $base * 5;
+    font-size: $fontSizeHuge;
+    font-weight: 200;
+    text-align: center;
+}
+
 .h3 {
     margin-bottom: $base * 5;
     font-weight: 200;

@@ -9,13 +9,6 @@
     height: 48vw;
 }
 
-.title {
-    margin-top: -3vw;
-    font-size: $fontSizeHuge;
-    font-weight: 200;
-    text-align: center;
-}
-
 .subtitle {
     font-size: $fontSizeBig;
     font-weight: 200;
@@ -43,6 +36,8 @@
 }
 
 .title {
+    margin-top: -3vw;
+
     &:hover {
         .letter {
             margin: 0 1.5vw;

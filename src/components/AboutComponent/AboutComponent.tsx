@@ -13,7 +13,7 @@ interface Props {
 
 export const AboutComponent: React.StatelessComponent<Props> = props => (
   <section className={classnames(props.className, styles.about)} id="aboutSection">
-    <Headline>what can I do for you?</Headline>
+    <Headline size="h3">what can I do for you?</Headline>
     <p className={styles.p}>
       After being a <span className={styles.green}>professional frontend developer</span> for 5 years, I decided to take on new paths and
       combine my technical knowledge with my creative side projects as an <span className={styles.pink}>illustrator and mural artist</span>.

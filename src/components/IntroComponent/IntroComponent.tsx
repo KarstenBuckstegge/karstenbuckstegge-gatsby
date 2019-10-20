@@ -3,6 +3,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 import HR from '../../../svg/hr.svg';
+import { Headline } from '../../patterns/Headline/Headline';
 
 import styles from './introComponent.module.scss';
 
@@ -13,7 +14,7 @@ interface Props {
 export const IntroComponent: React.StatelessComponent<Props> = props => {
   return (
     <section className={classnames(props.className, styles.intro)} id="introSection">
-      <h1 className={styles.title}>
+      <Headline size="h1" className={styles.title}>
         <div className={classnames(styles.names, styles.firstName)}>
           <span className={classnames(styles.letter, styles.firstNameLetter1)}>K</span>
           <span className={classnames(styles.letter, styles.firstNameLetter2)}>A</span>
@@ -35,7 +36,7 @@ export const IntroComponent: React.StatelessComponent<Props> = props => {
           <span className={classnames(styles.letter, styles.lastNameLetter8)}>GG</span>
           <span className={classnames(styles.letter, styles.lastNameLetter9)}>E</span>
         </div>
-      </h1>
+      </Headline>
       <h2 className={styles.subtitle}>Visual Artist</h2>
     </section>
   );

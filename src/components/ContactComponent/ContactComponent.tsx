@@ -15,7 +15,7 @@ interface Props {
 
 export const ContactComponent: React.StatelessComponent<Props> = props => (
   <section className={props.className} id="contactSection">
-    <Headline>talk to me...</Headline>
+    <Headline size="h3">talk to me...</Headline>
     <p className={styles.p}>
       <Obfuscate className={styles.emailLink} email="hallo@karstenbuckstegge.de">
         Just shoot me an email directly&nbsp;
