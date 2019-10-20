@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Masonry from 'react-masonry-component';
 
-import PortfolioContainer, { Project, ProjectTypes } from 'src/pages/portfolio';
+import { Project, ProjectTypes } from 'src/pages/portfolio';
 import { PortfolioFiltersComponent } from '../../components/PortfolioFiltersComponent/PortfolioFiltersComponent';
 import { PortfolioItemComponent } from '../../components/PortfolioItemComponent/PortfolioItemComponent';
 
