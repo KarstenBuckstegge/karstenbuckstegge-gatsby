@@ -11,37 +11,21 @@ interface Props {
   projects: Project[];
 }
 
-interface State {
-  loading: boolean;
-}
+export const Portfolio: React.FC<Props> = props => {
+  const [loading, setLoading] = React.useState(true);
 
-export class Portfolio extends React.Component<Props, State> {
-  public state: State = {
-    loading: true
+  const onImagesLoaded = () => {
+    if (loading) {
+      setLoading(false);
+    }
   };
 
-  constructor(props: Props) {
-    super(props);
-
-    this.onImagesLoaded = this.onImagesLoaded.bind(this);
-  }
-
-  public render() {
-    return (
-      <LayoutComponent secondaryPage={true} loading={this.state.loading}>
-        <Headline className={styles.headline} size="h1">
-          PORTFOLIO
-        </Headline>
-        <PortfolioItems items={this.props.projects} onImagesLoaded={this.onImagesLoaded} />
-      </LayoutComponent>
-    );
-  }
-
-  private onImagesLoaded() {
-    if (this.state.loading) {
-      this.setState({
-        loading: false
-      });
-    }
-  }
-}
+  return (
+    <LayoutComponent secondaryPage={true} loading={loading}>
+      <Headline className={styles.headline} size="h1">
+        PORTFOLIO
+      </Headline>
+      <PortfolioItems items={props.projects} onImagesLoaded={onImagesLoaded} />
+    </LayoutComponent>
+  );
+};

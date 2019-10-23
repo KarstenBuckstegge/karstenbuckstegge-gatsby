@@ -15,37 +15,28 @@ interface OwnProps {
 
 type Props = TextareaProps & OwnProps;
 
-interface State {
-  filled: boolean;
-}
+export const Textarea: React.FC<Props> = props => {
+  const { name, id, label, className, cols, rows } = props;
 
-export class Textarea extends React.Component<Props> {
-  public state: State = {
-    filled: false
-  };
-  public render() {
-    const { name, id, label, className, cols, rows } = this.props;
+  const [filled, setFilled] = React.useState(false);
 
-    const classes = classnames(className, styles.container);
-
-    const textareaClasses = classnames(styles.textarea, {
-      [styles.filled]: this.state.filled
-    });
-
-    return (
-      <div className={classes}>
-        <textarea className={textareaClasses} name={name} id={id} cols={cols} rows={rows} onChange={this.onChange} />
-        <label className={styles.label}>{label}</label>
-        <FormSVG className={styles.underline} />
-      </div>
-    );
-  }
-
-  private onChange = (event: React.SyntheticEvent<HTMLTextAreaElement>) => {
+  const onChange = (event: React.SyntheticEvent<HTMLTextAreaElement>) => {
     const value = event.currentTarget.value;
 
-    this.setState({
-      filled: value.length > 0
-    });
+    setFilled(value.length > 0);
   };
-}
+
+  const classes = classnames(className, styles.container);
+
+  const textareaClasses = classnames(styles.textarea, {
+    [styles.filled]: filled
+  });
+
+  return (
+    <div className={classes}>
+      <textarea className={textareaClasses} name={name} id={id} cols={cols} rows={rows} onChange={onChange} />
+      <label className={styles.label}>{label}</label>
+      <FormSVG className={styles.underline} />
+    </div>
+  );
+};

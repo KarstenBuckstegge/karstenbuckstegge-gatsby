@@ -10,27 +10,19 @@ import { LayoutComponent } from '../LayoutComponent/LayoutComponent';
 
 import styles from './indexComponent.module.scss';
 
-interface State {
-  loading: boolean;
-}
+export const IndexComponent: React.FC<{}> = () => {
+  const [loading, setLoading] = React.useState(true);
 
-export class IndexComponent extends React.Component<{}, State> {
-  public state = { loading: true };
-
-  public render() {
-    return (
-      <LayoutComponent loading={this.state.loading}>
-        <Stream onLoad={this.onLoadStream} />
-        <IntroComponent className={styles.section} />
-        <AboutComponent className={classnames(styles.section, styles.about)} />
-        <ContactComponent className={classnames(styles.section, styles.contact)} />
-      </LayoutComponent>
-    );
-  }
-
-  private onLoadStream = () => {
-    this.setState({
-      loading: false
-    });
+  const onLoadStream = () => {
+    setLoading(false);
   };
-}
+
+  return (
+    <LayoutComponent loading={loading}>
+      <Stream onLoad={onLoadStream} />
+      <IntroComponent className={styles.section} />
+      <AboutComponent className={classnames(styles.section, styles.about)} />
+      <ContactComponent className={classnames(styles.section, styles.contact)} />
+    </LayoutComponent>
+  );
+};

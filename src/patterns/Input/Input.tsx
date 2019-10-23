@@ -15,37 +15,28 @@ interface OwnProps {
 
 type Props = InputProps & OwnProps;
 
-interface State {
-  filled: boolean;
-}
+export const Input: React.FC<Props> = props => {
+  const { type, name, id, label, className } = props;
 
-export class Input extends React.Component<Props> {
-  public state: State = {
-    filled: false
-  };
-  public render() {
-    const { type, name, id, label, className } = this.props;
+  const [filled, setFilled] = React.useState(false);
 
-    const classes = classnames(className, styles.container);
-
-    const inputClasses = classnames(styles.input, {
-      [styles.filled]: this.state.filled
-    });
-
-    return (
-      <div className={classes}>
-        <input className={inputClasses} type={type} name={name} id={id} onChange={this.onChange} />
-        <label className={styles.label}>{label}</label>
-        <FormSVG className={styles.underline} />
-      </div>
-    );
-  }
-
-  private onChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+  const onChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
 
-    this.setState({
-      filled: value.length > 0
-    });
+    setFilled(value.length > 0);
   };
-}
+
+  const classes = classnames(className, styles.container);
+
+  const inputClasses = classnames(styles.input, {
+    [styles.filled]: filled
+  });
+
+  return (
+    <div className={classes}>
+      <input className={inputClasses} type={type} name={name} id={id} onChange={onChange} />
+      <label className={styles.label}>{label}</label>
+      <FormSVG className={styles.underline} />
+    </div>
+  );
+};
