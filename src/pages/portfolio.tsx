@@ -21,6 +21,7 @@ export interface Project {
       file: {
         url: string;
       };
+      title: string;
     };
     links: Links;
   };
@@ -47,6 +48,7 @@ export const portfolioContainerQuery = graphql`
             file {
               url
             }
+            title
           }
           links {
             behance
