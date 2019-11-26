@@ -11,6 +11,13 @@ $lightGreen: #87D7A0;
 $lightBlue: #6DB6D0;
 $lightPink: #E68EB6;
 
+$colorTransparency: 0.6;
+
+$transparentGreen: rgba($green, $colorTransparency);
+$transparentLightGreen: rgba($lightGreen, $colorTransparency);
+$transparentLightBlue: rgba($lightBlue, $colorTransparency);
+$transparentLightPink: rgba($lightPink, $colorTransparency);
+
 $fontSizeSmall: 14px;
 $fontSizeBase: 18px;
 $fontSizeBig: 26px;
