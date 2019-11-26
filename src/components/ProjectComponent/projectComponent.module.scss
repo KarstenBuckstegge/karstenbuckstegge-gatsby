@@ -1,12 +1,153 @@
-.wrapper {
-    width: 100%;
-    height: 100%;
+@import '../../styles/constants';
+
+$gridGutter: $base * 15;
+
+.project {
+    position: relative;
+    width: calc(33vw - #{$gridGutter});
+    margin-bottom: $gridGutter * 2;
+    list-style: none;
+}
+
+.imageWrapper {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: $base * 2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: flex;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: $base*4 $base*2;
+        opacity: 0;
+
+        transition: opacity $transition;
+
+        .illustration &,
+        .mural &,
+        .design & {
+            background: rgba($lightGreen, .8);
+        }
+
+        .illustration.mural &,
+        .illustration.design &,
+        .mural.design & {
+            background: linear-gradient(135deg, $transparentGreen 0%, $transparentLightGreen 100%);
+        }
+
+        .development & {
+            background: rgba($lightBlue, .8);
+        }
+
+        .development.illustration &,
+        .development.mural &,
+        .development.design & {
+            background: linear-gradient(135deg, $transparentLightGreen 0%, $transparentLightBlue 100%);
+        }
+
+        .development.illustration.experimental & .development.mural.experimental & .development.design.experimental & {
+            background: linear-gradient(135deg, $transparentLightGreen 0%, $transparentLightBlue 50%, $transparentLightPink 100%)
+        }
+
+        .experimental & {
+            background: rgba($lightPink, .8);
+
+        }
+
+        .experimental.illustration &,
+        .experimental.mural &,
+        .experimental.design & {
+            background: linear-gradient(135deg, $transparentLightGreen 0%, $transparentLightPink 100%);
+        }
+
+        .experimental.development & {
+            background: linear-gradient(135deg, $transparentLightBlue 0%, $transparentLightPink 100%);
+        }
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
 }
 
 .image {
     width: 100%;
+    vertical-align: middle;
+}
+
+.description {
+    margin-top: $base * 4;
+}
+
+.indicators {
+    position: absolute;
+    top: $base * 4;
+    right: $base * 4;
+    text-align: center;
+}
+
+.indicator {
+    width: $base * 5;
+
+    &+& {
+        margin-left: $base * 2;
+    }
+
+    &:nth-child(2) {
+        transform: rotate(30deg);
+    }
+
+    &:nth-child(3) {
+        transform: rotate(70deg);
+    }
+
+    &:nth-child(4) {
+        transform: rotate(120deg);
+    }
+
+    &illustration {
+        color: $lightGreen;
+    }
+
+    &mural {
+        color: $lightGreen;
+    }
+
+    &design {
+        color: $lightGreen;
+    }
+
+    &development {
+        color: $lightBlue;
+    }
+
+    &experimental {
+        color: $lightPink;
+    }
 }
 
 .title {
-    height: 20%;
+    height: auto;
+    margin: $base*2 0;
+    text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-#{$base * 8});
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -4,7 +4,7 @@ import Masonry from 'react-masonry-component';
 
 import { Project, ProjectTypes } from 'src/pages/portfolio';
 import { PortfolioFiltersComponent } from '../../components/PortfolioFiltersComponent/PortfolioFiltersComponent';
-import { PortfolioItemComponent } from '../../components/PortfolioItemComponent/PortfolioItemComponent';
+import { ProjectComponent } from '../../components/ProjectComponent/ProjectComponent';
 
 import styles from './portfolioItemsContainer.module.scss';
 
@@ -67,13 +67,12 @@ export class PortfolioItems extends React.Component<Props, State> {
           className={styles.grid}
           elementType="ul"
           options={{
-            columnWidth: 30,
             fitWidth: true,
-            gutter: 10
+            gutter: 45
           }}
         >
           {this.sortItems().map(item => (
-            <PortfolioItemComponent item={item} key={item.node.title} />
+            <ProjectComponent project={item} key={item.node.title} />
           ))}
         </Masonry>
       </>
