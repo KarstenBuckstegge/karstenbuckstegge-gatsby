@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path stroke="currentColor" d="M14.58 7.39v8.21H7.34V7.39h7.24M15 7H7v9h8V7zM7.13 18.21h7.67v6.59H7.13z" />
+    <path stroke="currentColor"
+        d="M14.61 18.4v6.22h-7.3V18.4h7.3M15 18H7v7h8v-7zm9.79-2.75v9.49h-7.55v-9.49h7.55M25 15h-8v10h8V15zM17.17 7.16h7.7v5.65h-7.7z" />
+    <path stroke="currentColor" d="M24.69 7.34v5.3h-7.35v-5.3h7.35M25 7h-8v6h8V7z" />
+</svg>

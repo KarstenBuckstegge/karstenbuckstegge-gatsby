@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width=".4"
+        d="M18.62 22.58l-2.38 5.3-2.45-5.3V10.4h4.83v12.18z" />
+    <rect x="12.86" y="7.94" width="6.7" height="2.42" rx=".65" fill="none" stroke="currentColor" stroke-miterlimit="10"
+        stroke-width=".4" />
+    <path d="M14.64 4.1h3.13a.88.88 0 01.88.88v2.86h0-4.89 0V5a.88.88 0 01.88-.9z" fill="none" stroke="currentColor"
+        stroke-miterlimit="10" stroke-width=".4" />
+    <path
+        d="M17.23 22.28h0c0-.55-.45-.82-1-.82s-1 .27-1 .82h0m-.01.01h0c-.11-.4-.49-.46-.84-.36a.71.71 0 00-.48.87h.1m3.24-.59h0a.62.62 0 01.84-.4.7.7 0 01.42.91h0"
+        fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".19" />
+    <path fill="currentColor" d="M17.33 25.45a2.53 2.53 0 00-1.12-.25 2.58 2.58 0 00-1.1.24l1.13 2.44z" />
+    <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width=".19" d="M15.18 22.22V10.41m2.08 11.74V10.41" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".09"
+        d="M17.51 8.6l-.62 1.04m1.24-1.1l-.77 1.28m-3.33-2.53l.53.53m-.46-3.5l3.43 3.43M13.8 4.63l3.42 3.42m-3.37-2.76L16.56 8m-2.67-2.07l2.03 2.03M13.85 6.5l1.5 1.5m1.71-3.74l1.52 1.51m-1.29-1.82l1.52 1.51M14.4 4.02l3.85 3.85m-3.18-3.79l3.47 3.48m-2.83-3.45l2.8 2.81m-2.23-2.84l2.27 2.27" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".19"
+        d="M23.8 19.51l.56-.77m-4.09-1.82l.57-.77" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".16"
+        d="M22.21 17.98l.39-.54m-3.92-2.04l.4-.54" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".19"
+        d="M13.23 11.75l.57-.77M9.71 9.16l.56-.77" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".16"
+        d="M11.64 10.22l.4-.54" />
+    <path d="M13.77 13.29l-5.4-4h-.06v.06l5.45 4zM24 20.81l-5.44-4v.11L24 20.88v-.07z" />
+    <path
+        d="M13.77 10.87L9.24 7.54a.83.83 0 00-1.14.18l-1.91 2.6a.82.82 0 00.18 1.14l7.4 5.44zm11.75 8.63l-6.89-5.06v6l4 2.93a.82.82 0 001.14-.17l1.91-2.61a.8.8 0 00-.16-1.09z"
+        fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".4" />
+</svg>
