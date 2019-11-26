@@ -25,8 +25,6 @@ interface State {
   activeFilters: Filters;
 }
 
-export const FILTERS = ['illustration', 'development', 'mural', 'experimental', 'design'];
-
 const hasFilteredType = (types: ProjectTypes[], filters: Filters) => {
   const filteredTypes = types.filter(type => {
     return filters[type];

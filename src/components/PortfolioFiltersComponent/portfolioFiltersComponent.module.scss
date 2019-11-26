@@ -7,13 +7,17 @@
     padding: 0 $base*10;
 }
 
-.filterContainer {
+.filter {
     position: relative;
+    display: flex;
+    align-items: center;
     padding: $base*4 $base*4;
     font-size: $fontSizeBig;
     font-weight: 200;
     text-transform: uppercase;
     cursor: pointer;
+
+    transition: color $transition;
 
     background: none;
     border: none;
@@ -21,14 +25,21 @@
     box-shadow: none;
 }
 
+.filterIcon {
+    margin-right: $base * 4;
+}
+
 .underline {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateX(-5%);
+    transform: translateX(-5%) scaleX(0);
+    transform-origin: right;
+    color: $fontGrey;
+    opacity: 0;
 
-    transition: color $transition;
+    transition: opacity $transition, transform $transition;
 }
 
 .illustration,
@@ -36,32 +47,41 @@
 .design {
 
     &:hover,
-    &:focus,
-    &.active {
-        .underline {
-            color: $lightGreen;
-        }
+    &:focus {
+        color: $lightGreen;
+    }
+
+    &.active .underline {
+        opacity: 1;
+        transform: translateX(-5%) scaleX(1);
+        color: $lightGreen;
     }
 }
 
 .development {
 
     &:hover,
-    &:focus,
-    &.active {
-        .underline {
-            color: $lightBlue;
-        }
+    &:focus {
+        color: $lightBlue;
+    }
+
+    &.active .underline {
+        opacity: 1;
+        transform: translateX(-5%) scaleX(1);
+        color: $lightBlue;
     }
 }
 
 .experimental {
 
     &:hover,
-    &:focus,
-    &.active {
-        .underline {
-            color: $lightPink;
-        }
+    &:focus {
+        color: $lightPink;
+    }
+
+    &.active .underline {
+        opacity: 1;
+        transform: translateX(-5%) scaleX(1);
+        color: $lightPink;
     }
 }

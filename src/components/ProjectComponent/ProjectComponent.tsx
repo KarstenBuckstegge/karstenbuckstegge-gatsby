@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { Project } from 'src/pages/portfolio';
 
 import Bubble from '../../../svg/bubble_1.svg';
+import View from '../../../svg/icons/view.svg';
 
 import styles from './projectComponent.module.scss';
 
@@ -24,12 +25,13 @@ export const ProjectComponent = (props: Props) => {
   return (
     <li className={classnames(styles.project, typeStyles())} tabIndex={1}>
       <a className={styles.imageWrapper} href={links.behance} target="_blank">
+        <View className={styles.viewIcon} />
         <img className={styles.image} src={`https:${image.file.url}`} alt={image.title} />
       </a>
       <div className={styles.description}>
         <div className={styles.indicators}>
           {type.map(projectType => (
-            <Bubble className={classnames(styles.indicator, styles[`indicator${projectType}`])} key={projectType} />
+            <Bubble className={classnames(styles.indicator, styles[`indicator${projectType}`])} key={projectType} title={projectType} />
           ))}
         </div>
         <h2 className={styles.title}>{title}</h2>

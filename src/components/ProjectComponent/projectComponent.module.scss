@@ -9,6 +9,22 @@ $gridGutter: $base * 15;
     list-style: none;
 }
 
+.viewIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    max-height: 60%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    color: $fontGrey;
+
+    transition: opacity $transition;
+}
+
 .imageWrapper {
     position: relative;
     display: block;
@@ -73,8 +89,14 @@ $gridGutter: $base * 15;
         }
     }
 
-    &:hover::before {
-        opacity: 1;
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        .viewIcon {
+            opacity: 1;
+        }
     }
 }
 
