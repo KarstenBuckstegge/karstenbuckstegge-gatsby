@@ -3,20 +3,26 @@
 .menu {
     list-style: none;
     display: flex;
+    font-size: $fontSizeBig;
+    font-weight: 200;
 }
 
-.link {
-    text-decoration: none;
+.icon {
+    width: $base * 10;
+    height: $base * 10;
+    margin-right: $base * 4;
+}
+
+.item {
+    display: flex;
+    color: $grey;
+    align-items: center;
+
+    transition: color $transition;
 
     &+& {
         margin-left: $base * 15;
     }
-}
-
-.item {
-    color: $grey;
-
-    transition: color $transition;
 
     &:hover {
         color: darken($grey, 10);
@@ -37,4 +43,9 @@
     &:hover {
         color: darken($blue, 10);
     }
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
 }
