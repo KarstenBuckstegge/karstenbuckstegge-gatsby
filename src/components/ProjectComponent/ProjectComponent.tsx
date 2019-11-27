@@ -26,9 +26,17 @@ export const ProjectComponent = (props: Props) => {
   const getLinkIcon = (link: string) => {
     if (link === 'instagram' || link === 'behance' || link === 'xing' || link === 'behance' || link === 'web') {
       // @ts-ignore
-      return <Icon icon={link}>{link}</Icon>;
+      return (
+        <Icon className={styles.linkIcon} icon={link}>
+          {link}
+        </Icon>
+      );
     } else {
-      return <Icon icon="link">{link}</Icon>;
+      return (
+        <Icon className={styles.linkIcon} icon="link">
+          {link}
+        </Icon>
+      );
     }
   };
 
