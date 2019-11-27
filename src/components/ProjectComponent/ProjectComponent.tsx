@@ -3,6 +3,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 import { Project } from 'src/pages/portfolio';
+import { Icon } from '../../patterns/Icon/Icon';
 
 import Bubble from '../../../svg/bubble_1.svg';
 import View from '../../../svg/icons/view.svg';
@@ -20,6 +21,15 @@ export const ProjectComponent = (props: Props) => {
     return type.map(projectType => {
       return styles[projectType];
     });
+  };
+
+  const getLinkIcon = (link: string) => {
+    if (link === 'instagram' || link === 'behance' || link === 'xing' || link === 'behance' || link === 'web') {
+      // @ts-ignore
+      return <Icon icon={link}>{link}</Icon>;
+    } else {
+      return <Icon icon="link">{link}</Icon>;
+    }
   };
 
   return (
@@ -44,8 +54,8 @@ export const ProjectComponent = (props: Props) => {
             }
 
             return (
-              <a key={link} href={links[link]} target="_blank">
-                {link}
+              <a className={styles.link} key={link} href={links[link]} target="_blank">
+                {getLinkIcon(link)}
               </a>
             );
           })}

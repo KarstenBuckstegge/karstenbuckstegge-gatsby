@@ -109,11 +109,34 @@ $gridGutter: $base * 15;
     margin-top: $base * 4;
 }
 
+.links {
+    display: flex;
+    margin-top: $base * 4;
+}
+
+.link {
+    padding: $base;
+    border: 2px solid currentColor;
+    color: $green;
+
+    transition: color $transition;
+
+    &+& {
+        margin-left: $base * 2;
+    }
+
+    &:hover,
+    &:focus {
+        color: darken($green, 10);
+    }
+}
+
 .indicators {
     position: absolute;
     top: $base * 4;
     right: $base * 4;
     text-align: center;
+    pointer-events: none;
 }
 
 .indicator {
