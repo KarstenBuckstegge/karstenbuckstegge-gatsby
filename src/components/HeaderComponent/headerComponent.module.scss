@@ -9,7 +9,7 @@
     min-height: $headerHeight;
     top: 0;
     right: 0;
-    padding: 0 $base * 5;
+    padding: 0 $layoutPadding;
     background: white;
     z-index: 999;
 }

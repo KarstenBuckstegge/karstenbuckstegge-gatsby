@@ -12,7 +12,7 @@ interface Props {
 
 export const HeaderComponent: React.StatelessComponent<Props> = props => (
   <header className={styles.header}>
-    <LogoComponent link="#" className={styles.logo} />
+    <LogoComponent link="/" className={styles.logo} />
     {props.secondaryPage ? (
       <LinkButton internal={true} href="/" className={styles.link} color="green" size="small">
         Back to MainPage
