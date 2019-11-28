@@ -1,0 +1,29 @@
+@import '../../styles/constants';
+
+.footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: $footerHeight;
+    padding: 0 $layoutPadding;
+}
+
+.link {
+    text-decoration: none;
+    color: $grey;
+
+    transition: color $transition;
+
+    &+& {
+        margin-left: $base * 4;
+    }
+
+    &:hover,
+    &:focus {
+        color: darken($grey, 10%);
+    }
+}

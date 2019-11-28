@@ -3,8 +3,12 @@
 .main {
     position: relative;
     width: 100%;
-    min-height: (11400 / 5000) * $streamWidth; // 11400/5000 ratio of stream svg
-    padding: ($headerHeight + $layoutPadding) $layoutPadding $layoutPadding;
+    min-height: (12000 / 5000) * $streamWidth; // 12000/5000 ratio of stream svg
+    padding: ($headerHeight + $layoutPadding) $layoutPadding ($layoutPadding + $footerHeight);
+}
+
+.secondary {
+    min-height: 100vh;
 }
 
 .content {
