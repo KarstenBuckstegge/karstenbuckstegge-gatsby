@@ -8,10 +8,10 @@ export const FooterComponent: React.FC = () => (
   <footer className={styles.footer}>
     <span>&copy; Karsten Buckstegge 2019</span>
     <span className={styles.links}>
-      <Link className={styles.link} to="privacy">
+      <Link className={styles.link} to="/privacy/">
         Datenschutz
       </Link>
-      <Link className={styles.link} to="impressum">
+      <Link className={styles.link} to="/impressum/">
         Impressum
       </Link>
     </span>

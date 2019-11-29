@@ -23,7 +23,7 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
       ways to visualize your ideas on cavas, display, wall or whatever medium you can imagine.
     </p>
     <div className={styles.buttonContainer}>
-      <LinkButton internal={true} href="portfolio" type="button" color="green" className={styles.portfolio}>
+      <LinkButton internal={true} href="/portfolio/" type="button" color="green" className={styles.portfolio}>
         visit my portfolio
       </LinkButton>
       <LinkButton href="/#contactSection" color="grey" className={styles.contact}>
