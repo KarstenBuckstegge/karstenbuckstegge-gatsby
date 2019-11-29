@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import ReactResizeDetector from 'react-resize-detector';
 
-import { allImages, StreamComponent } from '../components/StreamComponent/streamComponent';
+import { allImages, StreamComponent } from '../components/StreamComponent/StreamComponent';
 
 interface Props {
   onLoad: () => void;

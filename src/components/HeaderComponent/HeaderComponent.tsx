@@ -7,6 +7,7 @@ import { MenuComponent } from '../MenuComponent/MenuComponent';
 import styles from './headerComponent.module.scss';
 
 interface Props {
+  headerOffScreen: boolean;
   secondaryPage?: boolean;
 }
 
@@ -18,7 +19,7 @@ export const HeaderComponent: React.StatelessComponent<Props> = props => (
         Back to MainPage
       </LinkButton>
     ) : (
-      <MenuComponent />
+      <MenuComponent headerOffScreen={props.headerOffScreen} />
     )}
   </header>
 );

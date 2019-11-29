@@ -1,32 +1,15 @@
 @import '../../styles/constants';
 
-.menu {
-    list-style: none;
+$bubbleSize: $base * 20;
+
+.links {
     display: flex;
     font-size: $fontSizeBig;
     font-weight: 200;
-}
 
-.icon {
-    width: $base * 10;
-    height: $base * 10;
-    margin-right: $base * 4;
-}
+    list-style: none;
 
-.item {
-    display: flex;
-    color: $grey;
-    align-items: center;
-
-    transition: color $transition;
-
-    &+& {
-        margin-left: $base * 15;
-    }
-
-    &:hover {
-        color: darken($grey, 10);
-    }
+    transition: opacity $transition, transform $transition;
 }
 
 .portfolio {
@@ -45,7 +28,103 @@
     }
 }
 
+.contact {
+    color: $grey;
+
+    &:hover {
+        color: darken($grey, 10);
+    }
+}
+
 .link {
+    display: block;
     text-decoration: none;
-    color: currentColor;
+
+    transition: color $transition .4s;
+
+    &+& {
+        margin-left: $base * 15;
+    }
+}
+
+.bubbles {
+    opacity: 0;
+}
+
+.bubble {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $bubbleSize;
+    height: $bubbleSize;
+    border-radius: 50%;
+    background: currentColor;
+
+    will-change: transform;
+
+    transition: color $transition;
+
+    &.portfolio {
+        top: calc(50vh - #{$bubbleSize/2});
+        left: $layoutPadding/2;
+
+        transform: translate(calc(100vw - 470px), calc(-50vh + #{$base*10})) scale(.5);
+    }
+
+    &.about {
+        top: calc(50vh - #{$bubbleSize*1.25});
+        right: $layoutPadding/2;
+
+        transform: translate(-180px, calc(-50vh + #{$base*10 + $bubbleSize*0.75})) scale(.5);
+    }
+
+    &.contact {
+        top: calc(50vh + #{$bubbleSize*0.25});
+        right: $layoutPadding/2;
+
+        transform: translate(-20px, calc(-50vh + #{$base*10 - $bubbleSize*0.75})) scale(.5);
+    }
+}
+
+.icon {
+    color: white;
+}
+
+.offset {
+    .links {
+        opacity: 0;
+    }
+
+    .bubbles {
+        opacity: 1;
+
+        transition: opacity 1s;
+    }
+
+    .bubble {
+        transform: translate(0) scale(1);
+
+        transition: color $transition, transform .8s .1s ease-out;
+    }
+
+    .contact {
+        transition-duration: .6s;
+    }
+}
+
+@keyframes showIcons {
+    20% {
+        opacity: 0;
+        transform: scale(1);
+        pointer-events: auto;
+        color: currentColor;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        color: white;
+    }
 }
