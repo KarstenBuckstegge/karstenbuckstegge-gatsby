@@ -3,12 +3,14 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
+import { ButtonColors, ButtonSizes } from '../Button/Button';
+
 import ButtonStyles from '../Button/button.module.scss';
 import styles from './linkButton.module.scss';
 
 interface OwnProps {
-  color: 'green' | 'pink' | 'grey';
-  size?: 'small';
+  color: ButtonColors;
+  size?: ButtonSizes;
 }
 
 interface LinkButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {

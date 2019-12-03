@@ -1,5 +1,8 @@
 @import '../../styles/constants';
 
+$xing: #026466;
+$linkedIn: #0077b5;
+
 .button {
     position: relative;
     height: 100%;
@@ -42,6 +45,26 @@
     &:focus,
     &:active {
         color: darken($grey, 20);
+    }
+}
+
+.xing {
+    color: $xing;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($xing, 20);
+    }
+}
+
+.linkedIn {
+    color: $linkedIn;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($linkedIn, 20);
     }
 }
 

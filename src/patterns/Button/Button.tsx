@@ -4,9 +4,12 @@ import classnames from 'classnames';
 
 import styles from './button.module.scss';
 
+export type ButtonColors = 'green' | 'pink' | 'grey' | 'linkedIn' | 'xing';
+export type ButtonSizes = 'small';
+
 interface OwnProps {
-  color: 'green' | 'pink' | 'grey';
-  size?: 'small';
+  color: ButtonColors;
+  size?: ButtonSizes;
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

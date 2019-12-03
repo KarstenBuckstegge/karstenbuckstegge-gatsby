@@ -1,28 +1,11 @@
 @import '../../styles/constants';
 
 .button {
-    margin-top: $base * 7;
-}
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 
-.p {
-    margin: $base*4 0;
-}
-
-.emailLink {
-    font-size: $fontSizeBase;
-    color: $green;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($green, 10);
+    &+& {
+        margin-left: $base * 4;
     }
-}
-
-.info {
-    margin-top: $base * 2;
-    color: $grey;
-    font-size: $fontSizeSmall;
 }

@@ -1,12 +1,14 @@
 import * as React from 'react';
 
+import classnames from 'classnames';
 import Obfuscate from 'react-obfuscate';
 
-import { Button } from '../../patterns/Button/Button';
 import { Headline } from '../../patterns/Headline/Headline';
-import { Input } from '../../patterns/Input/Input';
-import { Textarea } from '../../patterns/Textarea/Textarea';
+import { Icon } from '../../patterns/Icon/Icon';
+import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 
+import ButtonStyles from '../../patterns/Button/button.module.scss';
+import LinkButtonStyles from '../../patterns/LinkButton/linkButton.module.scss';
 import styles from './contactComponent.module.scss';
 
 interface Props {
@@ -15,22 +17,23 @@ interface Props {
 
 export const ContactComponent: React.StatelessComponent<Props> = props => (
   <section className={props.className} id="contactSection">
-    <Headline size="h3">talk to me...</Headline>
-    <p className={styles.p}>
-      <Obfuscate className={styles.emailLink} email="hallo@karstenbuckstegge.de">
-        Just shoot me an email directly&nbsp;
+    <Headline size="h3">Sprich mit mir...</Headline>
+    <div className={styles.buttons}>
+      <Obfuscate
+        className={classnames(ButtonStyles.button, LinkButtonStyles.linkButton, ButtonStyles.grey, styles.button)}
+        email="hallo@karstenbuckstegge.de"
+      >
+        <Icon icon="mail" />
+        Email
       </Obfuscate>
-      or use the form below...
-    </p>
-    <form className={styles.form} action="https://formspree.io/xarebnkm" method="POST">
-      <Input type="text" name="name" id="name" label="Name" autoComplete="name" required={true} />
-      <Input type="email" name="_replyto" id="email" label="Email" autoComplete="email" required={true} />
-      <Input type="text" name="topic" id="topic" label="Topic" required={true} />
-      <Textarea name="message" id="message" label="Your Message" rows={2} required={true} />
-      <Button className={styles.button} color="green" size="small">
-        Send
-      </Button>
-    </form>
-    <p className={styles.info}>Clicking "Send" will redirect you to formspree in order to prevent spam.</p>
+      <LinkButton className={styles.button} color="linkedIn" href="https://www.linkedin.com/in/karstenbuckstegge/">
+        <Icon icon="linkedin" />
+        LinkedIn
+      </LinkButton>
+      <LinkButton className={styles.button} color="xing" href="https://www.xing.com/profile/Karsten_Buckstegge/">
+        <Icon icon="xing" />
+        Xing
+      </LinkButton>
+    </div>
   </section>
 );
