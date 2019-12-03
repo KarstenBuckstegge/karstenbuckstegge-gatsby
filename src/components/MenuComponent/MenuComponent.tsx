@@ -5,6 +5,10 @@ import { Link } from 'gatsby';
 
 import { Icon } from '../../patterns/Icon/Icon';
 
+import Bubble_1 from '../../../svg/bubble_1.svg';
+import Bubble_2 from '../../../svg/bubble_2.svg';
+import Bubble_3 from '../../../svg/bubble_3.svg';
+
 import styles from './menuComponent.module.scss';
 
 interface Props {
@@ -26,13 +30,16 @@ export const MenuComponent: React.FC<Props> = props => (
     </ul>
 
     <div className={styles.bubbles}>
-      <Link to="/portfolio/" className={classnames(styles.bubble, styles.portfolio)}>
+      <Link title="Portfolio" to="/portfolio/" className={classnames(styles.bubble, styles.portfolio)}>
+        <Bubble_1 className={styles.bubbleBackground} />
         <Icon className={styles.icon} icon="portfolio" />
       </Link>
-      <a href="/#aboutSection" className={classnames(styles.bubble, styles.about)}>
+      <a title="Über mich" href="/#aboutSection" className={classnames(styles.bubble, styles.about)}>
+        <Bubble_2 className={styles.bubbleBackground} />
         <Icon className={styles.icon} icon="home" />
       </a>
-      <a href="/#contactSection" className={classnames(styles.bubble, styles.contact)}>
+      <a title="Kontakt" href="/#contactSection" className={classnames(styles.bubble, styles.contact)}>
+        <Bubble_3 className={styles.bubbleBackground} />
         <Icon className={styles.icon} icon="mail" />
       </a>
     </div>

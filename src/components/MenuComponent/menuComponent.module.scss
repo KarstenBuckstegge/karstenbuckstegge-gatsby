@@ -58,8 +58,6 @@ $bubbleSize: $base * 20;
     align-items: center;
     width: $bubbleSize;
     height: $bubbleSize;
-    border-radius: 50%;
-    background: currentColor;
 
     will-change: transform;
 
@@ -87,8 +85,17 @@ $bubbleSize: $base * 20;
     }
 }
 
+.bubbleBackground {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
 .icon {
     color: white;
+    z-index: 2;
+    width: $base * 13;
+    height: $base * 13;
 }
 
 .offset {
@@ -105,11 +112,11 @@ $bubbleSize: $base * 20;
     .bubble {
         transform: translate(0) scale(1);
 
-        transition: color $transition, transform .8s .1s ease-out;
+        transition: color $transition, transform .7s .1s ease-out;
     }
 
     .contact {
-        transition-duration: .6s;
+        transition-duration: .5s;
     }
 }
 
