@@ -55,7 +55,8 @@ $web: $grey;
 
     &:hover,
     &:focus,
-    &:active {
+    &:active,
+    &.active {
         .content {
             color: white;
         }
@@ -73,6 +74,10 @@ $web: $grey;
 
 .pink {
     color: $pink;
+}
+
+.blue {
+    color: $blue;
 }
 
 .grey {

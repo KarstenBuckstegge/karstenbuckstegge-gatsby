@@ -3,84 +3,33 @@
 .filters {
     display: flex;
     justify-content: space-between;
-    margin: $base*10 0 $base*20;
-    padding: 0 $base*10;
+    margin: $base * 10 0 $base * 20;
+    padding: 0 $base * 10;
 }
 
 .filter {
     position: relative;
     display: flex;
     align-items: center;
-    padding: $base*4 $base*4;
+    min-width: 18%;
+    padding: $base * 4 $base * 4;
     font-size: $fontSizeBig;
     font-weight: 200;
     cursor: pointer;
 
-    transition: color $transition;
+    transition: color $transition, opacity $transition;
 
     background: none;
-    border: none;
     outline: none;
     box-shadow: none;
+
+    &:hover.active,
+    &:focus {
+        outline: 2px solid currentColor;
+    }
 }
 
 .filterIcon {
+    display: none;
     margin-right: $base * 4;
-}
-
-.underline {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateX(-5%) scaleX(0);
-    transform-origin: right;
-    color: $fontGrey;
-    opacity: 0;
-
-    transition: opacity $transition, transform $transition;
-}
-
-.illustration,
-.mural,
-.design {
-
-    &:hover,
-    &:focus {
-        color: $lightGreen;
-    }
-
-    &.active .underline {
-        opacity: 1;
-        transform: translateX(-5%) scaleX(1);
-        color: $lightGreen;
-    }
-}
-
-.development {
-
-    &:hover,
-    &:focus {
-        color: $lightBlue;
-    }
-
-    &.active .underline {
-        opacity: 1;
-        transform: translateX(-5%) scaleX(1);
-        color: $lightBlue;
-    }
-}
-
-.experimental {
-
-    &:hover,
-    &:focus {
-        color: $lightPink;
-    }
-
-    &.active .underline {
-        opacity: 1;
-        transform: translateX(-5%) scaleX(1);
-        color: $lightPink;
-    }
 }

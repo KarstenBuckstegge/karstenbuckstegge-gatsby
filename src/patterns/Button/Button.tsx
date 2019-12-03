@@ -4,12 +4,13 @@ import classnames from 'classnames';
 
 import styles from './button.module.scss';
 
-export type ButtonColors = 'green' | 'pink' | 'grey' | 'linkedIn' | 'xing' | 'behance' | 'instagram' | 'web';
+export type ButtonColors = 'green' | 'pink' | 'blue' | 'grey' | 'linkedIn' | 'xing' | 'behance' | 'instagram' | 'web';
 export type ButtonSizes = 'small';
 
 interface OwnProps {
   color: ButtonColors;
   size?: ButtonSizes;
+  active?: boolean;
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,12 +20,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 type Props = OwnProps & ButtonProps;
 
 export const Button: React.StatelessComponent<Props> = props => {
-  const { children, className, type, color, size } = props;
+  const { active, children, className, type, color, size } = props;
 
-  const classes = classnames(styles.button, className, color && styles[color], size && styles[size]);
+  const classes = classnames(styles.button, className, color && styles[color], size && styles[size], { [styles.active]: active });
 
   return (
-    <button className={classes} type={type}>
+    <button {...props} className={classes} type={type}>
       <div className={styles.content}>{children}</div>
     </button>
   );
