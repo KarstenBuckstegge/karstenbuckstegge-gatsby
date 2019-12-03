@@ -131,18 +131,9 @@ $gridGutter: $base * 15;
     width: $base * 13;
     height: $base * 13;
     padding: $base;
-    border: 2px solid currentColor;
-    color: $green;
-
-    transition: color $transition;
 
     &+& {
         margin-left: $base * 2;
-    }
-
-    &:hover,
-    &:focus {
-        color: darken($green, 10);
     }
 }
 

@@ -2,6 +2,9 @@
 
 $xing: #026466;
 $linkedIn: #0077b5;
+$behance: #1769ff;
+$instagram: #fd1d1d;
+$web: $grey;
 
 .button {
     position: relative;
@@ -82,6 +85,18 @@ $linkedIn: #0077b5;
 
 .linkedIn {
     color: $linkedIn;
+}
+
+.behance {
+    color: $behance;
+}
+
+.instagram {
+    color: $instagram;
+}
+
+.web {
+    color: $web;
 }
 
 .small {

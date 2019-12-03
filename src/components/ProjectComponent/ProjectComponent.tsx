@@ -2,13 +2,16 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
-import { Project } from 'src/pages/portfolio';
+import { Project } from '../../pages/portfolio';
 import { Icon } from '../../patterns/Icon/Icon';
+import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 
 import Bubble from '../../../svg/bubble_1.svg';
 import View from '../../../svg/icons/view.svg';
 
 import styles from './projectComponent.module.scss';
+
+type Link = 'behance' | 'instagram' | 'web';
 
 interface Props {
   project: Project;
@@ -56,15 +59,15 @@ export const ProjectComponent = (props: Props) => {
         <div className={styles.info}>{info}</div>
 
         <div className={styles.links}>
-          {Object.keys(links).map(link => {
+          {Object.keys(links).map((link: Link) => {
             if (!links[link]) {
               return;
             }
 
             return (
-              <a className={styles.link} key={link} href={links[link]} target="_blank">
+              <LinkButton className={styles.link} key={link} href={links[link]} color={link} target="_blank">
                 {getLinkIcon(link)}
-              </a>
+              </LinkButton>
             );
           })}
         </div>

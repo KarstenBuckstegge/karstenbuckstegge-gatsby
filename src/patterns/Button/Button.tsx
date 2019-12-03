@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import styles from './button.module.scss';
 
-export type ButtonColors = 'green' | 'pink' | 'grey' | 'linkedIn' | 'xing';
+export type ButtonColors = 'green' | 'pink' | 'grey' | 'linkedIn' | 'xing' | 'behance' | 'instagram' | 'web';
 export type ButtonSizes = 'small';
 
 interface OwnProps {
