@@ -32,14 +32,17 @@ export const MenuComponent: React.FC<Props> = props => (
     <div className={styles.bubbles}>
       <Link title="Portfolio" to="/portfolio/" className={classnames(styles.bubble, styles.portfolio)}>
         <Bubble_1 className={styles.bubbleBackground} />
+        <Bubble_1 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="portfolio" />
       </Link>
       <a title="Über mich" href="/#aboutSection" className={classnames(styles.bubble, styles.about)}>
         <Bubble_2 className={styles.bubbleBackground} />
+        <Bubble_2 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="home" />
       </a>
       <a title="Kontakt" href="/#contactSection" className={classnames(styles.bubble, styles.contact)}>
         <Bubble_3 className={styles.bubbleBackground} />
+        <Bubble_3 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="mail" />
       </a>
     </div>
