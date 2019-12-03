@@ -29,14 +29,14 @@ export const LinkButton: React.StatelessComponent<Props> = props => {
   if (internal) {
     return (
       <Link className={classes} to={href}>
-        {children}
+        <div className={ButtonStyles.content}>{children}</div>
       </Link>
     );
   }
 
   return (
     <a className={classes} href={href}>
-      {children}
+      <div className={ButtonStyles.content}>{children}</div>
     </a>
   );
 };

@@ -25,7 +25,7 @@ export const Button: React.StatelessComponent<Props> = props => {
 
   return (
     <button className={classes} type={type}>
-      {children}
+      <div className={styles.content}>{children}</div>
     </button>
   );
 };

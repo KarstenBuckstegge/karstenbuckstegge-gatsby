@@ -11,61 +11,77 @@ $linkedIn: #0077b5;
     font-size: $fontSizeBase;
     font-weight: 400;
     cursor: pointer;
+    overflow: hidden;
 
     transition: color $transition;
 
     outline: none;
     box-shadow: none;
+
+    .content {
+        transition: color $transition;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 150%;
+        width: 200%;
+        height: 100%;
+        z-index: -1;
+
+        will-change: transform;
+    }
+
+    &::before {
+        background: currentColor;
+        transform: skewX(5deg);
+
+        transition: transform 1s ease;
+    }
+
+    &::after {
+        border-right: 4px solid currentColor;
+        transform: skewX(5deg) translateX(#{$base*4});
+
+        transition: transform .95s ease;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        .content {
+            color: white;
+        }
+
+        &::before,
+        &::after {
+            transform: skewX(-45deg) translateX(120%);
+        }
+    }
 }
 
 .green {
     color: $green;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($green, 10);
-    }
 }
 
 .pink {
     color: $pink;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($pink, 10);
-    }
 }
 
 .grey {
     color: $grey;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($grey, 20);
-    }
 }
 
 .xing {
     color: $xing;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($xing, 20);
-    }
 }
 
 .linkedIn {
     color: $linkedIn;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($linkedIn, 20);
-    }
 }
 
 .small {

@@ -23,8 +23,10 @@ export const ContactComponent: React.StatelessComponent<Props> = props => (
         className={classnames(ButtonStyles.button, LinkButtonStyles.linkButton, ButtonStyles.grey, styles.button)}
         email="hallo@karstenbuckstegge.de"
       >
-        <Icon icon="mail" />
-        Email
+        <div className={ButtonStyles.content}>
+          <Icon icon="mail" />
+          Email
+        </div>
       </Obfuscate>
       <LinkButton className={styles.button} color="linkedIn" href="https://www.linkedin.com/in/karstenbuckstegge/">
         <Icon icon="linkedin" />
