@@ -49,6 +49,7 @@ $bubbleSize: $base * 20;
 
 .bubbles {
     opacity: 0;
+    pointer-events: none;
 }
 
 .bubble {
@@ -124,6 +125,7 @@ $bubbleSize: $base * 20;
 
     .bubbles {
         opacity: 1;
+        pointer-events: auto;
 
         transition: opacity 1s;
     }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { LayoutComponent } from '../LayoutComponent/LayoutComponent';
 
 export const ImpressumComponent: React.FC = () => (
-  <LayoutComponent secondaryPage={true}>
+  <LayoutComponent secondaryPage={true} pageTransitionDirection="right">
     <h1>Impressum</h1>
     Angaben gemäß § 5 TMG
     <br />

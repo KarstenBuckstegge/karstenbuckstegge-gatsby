@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 import { HeaderComponent } from '../components/HeaderComponent/HeaderComponent';
+import { transitionDirection } from './PageTransitionContainer';
 
 interface Props {
   secondaryPage?: boolean;
+  pageTransitionDirection?: transitionDirection;
 }
 
 interface State {
@@ -31,7 +33,13 @@ export class Header extends React.Component<Props, State> {
   }
 
   public render() {
-    return <HeaderComponent headerOffScreen={this.state.scrollPosition > 10} secondaryPage={this.props.secondaryPage} />;
+    return (
+      <HeaderComponent
+        headerOffScreen={this.state.scrollPosition > 10}
+        secondaryPage={this.props.secondaryPage}
+        pageTransitionDirection={this.props.pageTransitionDirection}
+      />
+    );
   }
 
   private onScroll() {
