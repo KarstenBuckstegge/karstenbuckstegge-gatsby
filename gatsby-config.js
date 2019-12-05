@@ -12,6 +12,7 @@ const {
 module.exports = {
     plugins: [
         "gatsby-transformer-remark",
+        "gatsby-plugin-transition-link",
         {
             resolve: "gatsby-plugin-typescript",
             options: {
