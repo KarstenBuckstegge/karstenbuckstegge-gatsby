@@ -12,15 +12,7 @@ interface Props {
 }
 
 export const PageTransition: React.FC<Props> = props => (
-  <AniLink
-    className={props.className}
-    to={props.to}
-    cover={true}
-    direction={props.direction}
-    duration={3}
-    bg={`url(https://source.unsplash.com/random/500x500) center no-repeat #00CAA7`}
-    title={props.title}
-  >
+  <AniLink className={props.className} to={props.to} cover={true} direction={props.direction} duration={3} bg="#00CAA7" title={props.title}>
     {props.children}
   </AniLink>
 );
