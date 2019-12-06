@@ -12443,10 +12443,9 @@ slice-ansi@^2.1.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll@^16.1.0:
+smooth-scroll@grgr-dkrk/smooth-scroll#forssr:
   version "16.1.0"
-  resolved "https://registry.yarnpkg.com/smooth-scroll/-/smooth-scroll-16.1.0.tgz#c811c63db67215d30847745ba0732feb3291947f"
-  integrity sha512-V5b8ekIekZ3xJ6f0sPsLgEbN5YT8gX0Q6yNjZXTKgqjH9dBGadZ0P50fhP0rLRBGifc44qfI3rnWNM+lebhJag==
+  resolved "https://codeload.github.com/grgr-dkrk/smooth-scroll/tar.gz/36f8815d7301f8f8d499ba5a6a351d7a529f5721"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
