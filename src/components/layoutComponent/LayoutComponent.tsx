@@ -32,10 +32,6 @@ const isExiting = (state: transitionState) => {
 };
 
 export const LayoutComponent: React.StatelessComponent<Props> = ({ secondaryPage, children, loading, pageTransitionDirection }) => {
-  require('smooth-scroll')('a[href*="#"]', {
-    speed: 600
-  });
-
   return (
     <TransitionState>
       {(transitionStatus: TransitionStatus) => (
