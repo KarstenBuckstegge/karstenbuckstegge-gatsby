@@ -1,0 +1,7 @@
+@import './constants';
+
+@mixin mediaSmall {
+    @media (max-width: $breakpointSmall) {
+        @content;
+    }
+}
