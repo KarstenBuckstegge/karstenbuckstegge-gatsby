@@ -20,12 +20,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 type Props = OwnProps & ButtonProps;
 
 export const Button: React.StatelessComponent<Props> = props => {
-  const { active, children, className, type, color, size } = props;
+  const { active, children, className, type, color, size, ...otherProps } = props;
 
   const classes = classnames(styles.button, className, color && styles[color], size && styles[size], { [styles.active]: active });
 
   return (
-    <button {...props} className={classes} type={type}>
+    <button {...otherProps} className={classes} type={type}>
       <div className={styles.content}>{children}</div>
     </button>
   );
