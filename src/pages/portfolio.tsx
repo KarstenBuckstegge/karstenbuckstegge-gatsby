@@ -1,3 +1,4 @@
+import { RouteComponentProps } from '@reach/router';
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
@@ -27,7 +28,7 @@ export interface Project {
   };
 }
 
-interface PortfolioProps {
+interface PortfolioProps extends RouteComponentProps {
   data: {
     allContentfulProject: {
       edges: Project[];

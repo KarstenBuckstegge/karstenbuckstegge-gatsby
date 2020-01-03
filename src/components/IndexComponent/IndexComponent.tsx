@@ -10,7 +10,16 @@ import { LayoutComponent } from '../LayoutComponent/LayoutComponent';
 
 import styles from './indexComponent.module.scss';
 
-export const IndexComponent: React.FC<{}> = () => {
+export interface Viewport {
+  height: number;
+  width: number;
+}
+
+interface Props {
+  viewport: Viewport;
+}
+
+export const IndexComponent: React.FC<Props> = props => {
   const [loading, setLoading] = React.useState(true);
 
   const onLoadStream = () => {
@@ -18,8 +27,8 @@ export const IndexComponent: React.FC<{}> = () => {
   };
 
   return (
-    <LayoutComponent loading={loading}>
-      <Stream onLoad={onLoadStream} />
+    <LayoutComponent loading={loading || props.viewport.width === 0}>
+      <Stream onLoad={onLoadStream} viewport={props.viewport} />
       <IntroComponent className={styles.section} />
       <AboutComponent className={classnames(styles.section, styles.about)} />
       <ContactComponent className={classnames(styles.section, styles.contact)} />

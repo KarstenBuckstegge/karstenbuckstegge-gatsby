@@ -1,18 +1,16 @@
 import * as React from 'react';
 
-import ReactResizeDetector from 'react-resize-detector';
-
+import { Viewport } from '../components/IndexComponent/IndexComponent';
 import { allImages, StreamComponent } from '../components/StreamComponent/StreamComponent';
 
 interface Props {
   onLoad: () => void;
+  viewport: Viewport;
 }
 
 interface State {
   imagesLoaded: number;
   scrollPosition: number;
-  viewportWidth: number;
-  viewportHeight: number;
 }
 
 let scrolling = false;
@@ -26,15 +24,12 @@ const SVG_IMAGE_COUNT = allImages.length;
 export class Stream extends React.Component<Props, State> {
   public state: State = {
     imagesLoaded: 0,
-    scrollPosition: 0,
-    viewportHeight: 0,
-    viewportWidth: 0
+    scrollPosition: 0
   };
 
   constructor(props: Props) {
     super(props);
     this.onScroll = this.onScroll.bind(this);
-    this.onResize = this.onResize.bind(this);
     this.imageLoaded = this.imageLoaded.bind(this);
   }
 
@@ -53,26 +48,14 @@ export class Stream extends React.Component<Props, State> {
   }
 
   public render() {
-    const streamWidth = this.state.viewportWidth * STREAM_WIDTH_VW;
+    const streamWidth = this.props.viewport.width * STREAM_WIDTH_VW;
     const streamHeight = streamWidth * STREAM_RATIO;
-    const streamStartBottom = this.state.viewportHeight - STREAM_MARGIN_TOP; // what pixel of the svg hits the viewport bottom edge
+    const streamStartBottom = this.props.viewport.height - STREAM_MARGIN_TOP; // what pixel of the svg hits the viewport bottom edge
     const hiddenStreamHeight = streamHeight - streamStartBottom; // how much of the svg is hidden
 
     const streamRelativeScrollPosition = this.state.scrollPosition / hiddenStreamHeight;
 
-    return (
-      <>
-        <ReactResizeDetector handleWidth={true} handleHeight={true} onResize={this.onResize} />
-        <StreamComponent scrollPosition={streamRelativeScrollPosition} imageLoaded={this.imageLoaded} />
-      </>
-    );
-  }
-
-  private onResize() {
-    this.setState({
-      viewportHeight: window.innerHeight,
-      viewportWidth: window.innerWidth
-    });
+    return <StreamComponent scrollPosition={streamRelativeScrollPosition} imageLoaded={this.imageLoaded} />;
   }
 
   private onScroll() {

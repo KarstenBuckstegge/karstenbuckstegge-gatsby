@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { IndexComponent } from '../components/IndexComponent/IndexComponent';
+import { Index } from '../containers/IndexContainer';
 
 class IndexPage extends React.Component<{}, {}> {
   public render() {
-    return <IndexComponent />;
+    return <Index />;
   }
 }
 
