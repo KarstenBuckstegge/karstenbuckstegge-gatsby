@@ -3,9 +3,10 @@ import * as React from 'react';
 import Masonry from 'react-masonry-component';
 import ReactResizeDetector from 'react-resize-detector';
 
-import { Project, ProjectTypes } from 'src/pages/portfolio';
+import { AboutComponent } from '../../components/AboutComponent/AboutComponent';
 import { PortfolioFiltersComponent } from '../../components/PortfolioFiltersComponent/PortfolioFiltersComponent';
 import { ProjectComponent } from '../../components/ProjectComponent/ProjectComponent';
+import { Project, ProjectTypes } from '../../pages/portfolio';
 import { MOBILE_BREAKPOINT } from '../IndexContainer';
 
 import styles from './portfolioItemsContainer.module.scss';
@@ -63,9 +64,10 @@ export class PortfolioItems extends React.Component<Props, State> {
 
   public render() {
     return (
-      <>
+      <div className={styles.container}>
         <ReactResizeDetector handleWidth={true} onResize={this.onResize} />
         <PortfolioFiltersComponent className={styles.filter} onFilterClick={this.onFilterClick} activeFilters={this.state.activeFilters} />
+        <AboutComponent className={styles.about} condensed={true} />
         <Masonry
           onImagesLoaded={this.props.onImagesLoaded}
           className={styles.grid}
@@ -79,7 +81,7 @@ export class PortfolioItems extends React.Component<Props, State> {
             <ProjectComponent project={item} key={item.node.title} />
           ))}
         </Masonry>
-      </>
+      </div>
     );
   }
 

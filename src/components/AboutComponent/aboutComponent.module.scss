@@ -1,6 +1,13 @@
 @import '../../styles/constants';
+@import '../../styles/mixins';
 
 $buttonOffset: $base * 5;
+
+.about {
+    @include mediaSmall {
+        margin-bottom: $base * 10;
+    }
+}
 
 .p {
     margin-bottom: $base * 10;
@@ -27,4 +34,10 @@ $buttonOffset: $base * 5;
 .contact {
     margin-top: $buttonOffset;
     margin-left: $base * 20;
+}
+
+.contactButton {
+    &+& {
+        margin-left: $base * 2;
+    }
 }

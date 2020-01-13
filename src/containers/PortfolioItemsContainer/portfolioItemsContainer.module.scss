@@ -1,7 +1,19 @@
 @import '../../styles/mixins';
 
+.container {
+    @include mediaSmall {
+        text-align: center;
+    }
+}
+
 .filter {
     @include mediaSmall {
+        display: none;
+    }
+}
+
+.about {
+    @include mediaBig {
         display: none;
     }
 }
