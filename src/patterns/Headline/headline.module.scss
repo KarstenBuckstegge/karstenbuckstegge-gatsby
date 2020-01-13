@@ -7,7 +7,9 @@
     font-weight: 200;
     text-align: center;
 
-    @include mediaSmall {}
+    @include mediaSmall {
+        font-size: $m_fontSizeXXL;
+    }
 }
 
 .h2 {
@@ -15,7 +17,9 @@
     font-weight: 200;
     text-align: center;
 
-    @include mediaSmall {}
+    @include mediaSmall {
+        font-size: $m_fontSizeL;
+    }
 }
 
 .h3 {
@@ -23,5 +27,7 @@
     font-weight: 200;
     font-size: $fontSizeXL;
 
-    @include mediaSmall {}
+    @include mediaSmall {
+        font-size: $m_fontSizeXL;
+    }
 }
