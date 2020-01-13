@@ -14,6 +14,7 @@ type FilterTypes = 'illustration' | 'development' | 'mural' | 'experimental' | '
 interface Props {
   onFilterClick: (event: React.SyntheticEvent) => void;
   activeFilters: Filters;
+  className?: string;
 }
 
 export const FILTERS: FilterTypes[] = ['illustration', 'development', 'mural', 'experimental', 'design'];
@@ -28,7 +29,7 @@ const setColor = (filter: FilterTypes) => {
 };
 
 export const PortfolioFiltersComponent: React.StatelessComponent<Props> = props => (
-  <div className={styles.filters}>
+  <div className={classnames(props.className, styles.filters)}>
     {FILTERS.map(filter => (
       <Button
         color={setColor(filter)}

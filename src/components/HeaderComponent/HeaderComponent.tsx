@@ -17,7 +17,14 @@ export const HeaderComponent: React.StatelessComponent<Props> = props => (
   <header className={styles.header}>
     <LogoComponent link="/" className={styles.logo} />
     {props.secondaryPage ? (
-      <LinkButton internal={true} href="/" className={styles.link} color="green" size="small" direction={props.pageTransitionDirection}>
+      <LinkButton
+        internal={true}
+        href="/"
+        className={styles.backButton}
+        color="green"
+        size="small"
+        direction={props.pageTransitionDirection}
+      >
         Back to MainPage
       </LinkButton>
     ) : (

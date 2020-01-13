@@ -1,10 +1,15 @@
 @import '../../styles/constants';
+@import '../../styles/mixins';
 
 .main {
     position: relative;
     width: 100%;
     min-height: (12000 / 5000) * $streamWidth; // 12000/5000 ratio of stream svg
     padding: ($headerHeight + $layoutPadding) $layoutPadding ($layoutPadding + $footerHeight);
+
+    @include mediaSmall {
+        padding: ($m_headerHeight + $m_layoutPadding) $m_layoutPadding ($m_layoutPadding + $m_footerHeight);
+    }
 }
 
 .secondary {

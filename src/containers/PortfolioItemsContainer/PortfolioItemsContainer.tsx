@@ -1,10 +1,12 @@
 import * as React from 'react';
 
 import Masonry from 'react-masonry-component';
+import ReactResizeDetector from 'react-resize-detector';
 
 import { Project, ProjectTypes } from 'src/pages/portfolio';
 import { PortfolioFiltersComponent } from '../../components/PortfolioFiltersComponent/PortfolioFiltersComponent';
 import { ProjectComponent } from '../../components/ProjectComponent/ProjectComponent';
+import { MOBILE_BREAKPOINT } from '../IndexContainer';
 
 import styles from './portfolioItemsContainer.module.scss';
 
@@ -23,6 +25,7 @@ export interface Filters {
 
 interface State {
   activeFilters: Filters;
+  isSmallScreen: boolean;
 }
 
 const hasFilteredType = (types: ProjectTypes[], filters: Filters) => {
@@ -47,26 +50,29 @@ export class PortfolioItems extends React.Component<Props, State> {
       experimental: false,
       illustration: false,
       mural: false
-    }
+    },
+    isSmallScreen: false
   };
 
   constructor(props: Props) {
     super(props);
 
     this.onFilterClick = this.onFilterClick.bind(this);
+    this.onResize = this.onResize.bind(this);
   }
 
   public render() {
     return (
       <>
-        <PortfolioFiltersComponent onFilterClick={this.onFilterClick} activeFilters={this.state.activeFilters} />
+        <ReactResizeDetector handleWidth={true} onResize={this.onResize} />
+        <PortfolioFiltersComponent className={styles.filter} onFilterClick={this.onFilterClick} activeFilters={this.state.activeFilters} />
         <Masonry
           onImagesLoaded={this.props.onImagesLoaded}
           className={styles.grid}
           elementType="ul"
           options={{
             fitWidth: true,
-            gutter: 45
+            gutter: this.state.isSmallScreen ? 0 : 45
           }}
         >
           {this.sortItems().map(item => (
@@ -112,5 +118,15 @@ export class PortfolioItems extends React.Component<Props, State> {
     this.setState({
       activeFilters: tempActiveFilters
     });
+  }
+
+  private onResize() {
+    const isCurrentlySmallScreen = window.innerWidth < MOBILE_BREAKPOINT;
+
+    if (this.state.isSmallScreen !== isCurrentlySmallScreen) {
+      this.setState({
+        isSmallScreen: isCurrentlySmallScreen
+      });
+    }
   }
 }

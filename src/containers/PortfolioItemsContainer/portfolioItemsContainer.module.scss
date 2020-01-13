@@ -1,3 +1,11 @@
+@import '../../styles/mixins';
+
+.filter {
+    @include mediaSmall {
+        display: none;
+    }
+}
+
 .grid {
     margin: 0 auto;
 }

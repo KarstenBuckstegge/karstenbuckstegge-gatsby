@@ -35,3 +35,8 @@ $transition: .4s ease;
 $streamWidth: 95vw;
 
 $breakpointSmall: 1200px;
+
+// MOBILE
+$m_layoutPadding: $base * 3;
+$m_headerHeight: $base * 5;
+$m_footerHeight: $base * 5;
