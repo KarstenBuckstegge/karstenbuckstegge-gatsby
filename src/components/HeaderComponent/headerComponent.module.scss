@@ -17,7 +17,7 @@
     @include mediaSmall {
         justify-content: center;
         min-height: $m_headerHeight;
-        padding: 0 $m_layoutPadding;
+        padding: $base*2 $m_layoutPadding;
     }
 }
 
