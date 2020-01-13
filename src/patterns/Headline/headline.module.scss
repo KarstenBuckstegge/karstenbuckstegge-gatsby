@@ -1,20 +1,27 @@
 @import '../../styles/constants';
+@import '../../styles/mixins';
 
 .h1 {
     margin-bottom: $base * 5;
-    font-size: $fontSizeHuge;
+    font-size: $fontSizeXXL;
     font-weight: 200;
     text-align: center;
+
+    @include mediaSmall {}
 }
 
 .h2 {
-    font-size: $fontSizeBig;
+    font-size: $fontSizeL;
     font-weight: 200;
     text-align: center;
+
+    @include mediaSmall {}
 }
 
 .h3 {
     margin-bottom: $base * 5;
     font-weight: 200;
-    font-size: 32px;
+    font-size: $fontSizeXL;
+
+    @include mediaSmall {}
 }
