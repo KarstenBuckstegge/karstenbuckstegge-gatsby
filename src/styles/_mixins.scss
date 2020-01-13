@@ -5,3 +5,9 @@
         @content;
     }
 }
+
+@mixin mediaBig {
+    @media (min-width: $breakpointSmall + 1px) {
+        @content;
+    }
+}
