@@ -39,7 +39,7 @@ const hasFilteredType = (types: ProjectTypes[], filters: Filters) => {
 
 const orderItems = (items: Project[]) => {
   return items.sort((itemA, itemB) => {
-    return new Date(itemA.node.createdAt).valueOf() - new Date(itemB.node.createdAt).valueOf();
+    return new Date(itemB.node.createdAt).valueOf() - new Date(itemA.node.createdAt).valueOf();
   });
 };
 
