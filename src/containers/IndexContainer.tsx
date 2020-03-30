@@ -4,7 +4,7 @@ import ReactResizeDetector from 'react-resize-detector';
 
 import { IndexComponent } from '../components/IndexComponent/IndexComponent';
 
-export const MOBILE_BREAKPOINT = 1200;
+export const MOBILE_BREAKPOINT = 1050;
 
 export const Index: React.FC = () => {
   const [viewportSize, setViewportSize] = React.useState({ width: 0, height: 0 });
