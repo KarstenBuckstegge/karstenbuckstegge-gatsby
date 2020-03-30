@@ -3,4 +3,8 @@
 
 .headline {
     margin-top: $base * 10;
+
+    @include mediaSmall {
+        margin-top: $base * 5;
+    }
 }

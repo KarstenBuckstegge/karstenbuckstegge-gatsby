@@ -15,6 +15,8 @@
     @include mediaSmall {
         padding: 0 $m_layoutPadding;
         height: $m_footerHeight;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
