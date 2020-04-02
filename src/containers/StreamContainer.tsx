@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Viewport } from '../components/IndexComponent/IndexComponent';
-import { allImages, StreamComponent } from '../components/StreamComponent/StreamComponent';
+import { StreamComponent } from '../components/StreamComponent/StreamComponent';
 
 interface Props {
   onLoad: () => void;
@@ -19,8 +19,6 @@ const STREAM_RATIO = 2.28030303030303;
 const STREAM_WIDTH_VW = 0.95;
 const STREAM_MARGIN_TOP = 88;
 
-const SVG_IMAGE_COUNT = allImages.length;
-
 export class Stream extends React.Component<Props, State> {
   public state: State = {
     imagesLoaded: 0,
@@ -30,7 +28,6 @@ export class Stream extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.onScroll = this.onScroll.bind(this);
-    this.imageLoaded = this.imageLoaded.bind(this);
   }
 
   public componentDidMount() {
@@ -41,12 +38,6 @@ export class Stream extends React.Component<Props, State> {
     window.removeEventListener('scroll', this.onScroll);
   }
 
-  public componentDidUpdate(prevProps: Props, prevState: State) {
-    if (this.state.imagesLoaded !== prevState.imagesLoaded && this.state.imagesLoaded === SVG_IMAGE_COUNT) {
-      this.props.onLoad();
-    }
-  }
-
   public render() {
     const streamWidth = this.props.viewport.width * STREAM_WIDTH_VW;
     const streamHeight = streamWidth * STREAM_RATIO;
@@ -55,7 +46,7 @@ export class Stream extends React.Component<Props, State> {
 
     const streamRelativeScrollPosition = this.state.scrollPosition / hiddenStreamHeight;
 
-    return <StreamComponent scrollPosition={streamRelativeScrollPosition} imageLoaded={this.imageLoaded} />;
+    return <StreamComponent scrollPosition={streamRelativeScrollPosition} imagesLoaded={this.props.onLoad} />;
   }
 
   private onScroll() {
@@ -72,11 +63,5 @@ export class Stream extends React.Component<Props, State> {
 
       scrolling = true;
     }
-  }
-
-  private imageLoaded() {
-    this.setState({
-      imagesLoaded: this.state.imagesLoaded + 1
-    });
   }
 }
