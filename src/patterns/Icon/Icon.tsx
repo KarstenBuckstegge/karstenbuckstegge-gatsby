@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
+import ArrowIcon from '../../../svg/icons/arrow.svg';
 import BehanceIcon from '../../../svg/icons/behance.svg';
 import DesignIcon from '../../../svg/icons/design.svg';
 import DevelopmentIcon from '../../../svg/icons/dev.svg';
@@ -21,6 +22,7 @@ import XingIcon from '../../../svg/icons/xing.svg';
 import styles from './icon.module.scss';
 
 type Icon =
+  | 'arrow'
   | 'illustration'
   | 'development'
   | 'mural'
@@ -47,6 +49,7 @@ interface Props {
 }
 
 const components: Components = {
+  arrow: ArrowIcon,
   behance: BehanceIcon,
   design: DesignIcon,
   development: DevelopmentIcon,

@@ -36,6 +36,10 @@ $buttonOffset: $base * 5;
     margin-left: $base * 20;
 }
 
+.socialButtons {
+    margin-top: $base * 4;
+}
+
 .contactButton {
     &+& {
         margin-left: $base * 2;

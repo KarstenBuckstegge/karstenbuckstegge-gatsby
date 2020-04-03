@@ -5,6 +5,7 @@ import { Icon } from '../../patterns/Icon/Icon';
 import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 import { LogoComponent } from '../LogoComponent/LogoComponent';
 import { MenuComponent } from '../MenuComponent/MenuComponent';
+import { SocialButtonsComponent } from '../SocialButtonsComponent/SocialButtonsComponent';
 
 import styles from './headerComponent.module.scss';
 
@@ -19,32 +20,19 @@ export const HeaderComponent: React.StatelessComponent<Props> = props => (
     <LogoComponent link="/" className={styles.logo} />
     {props.secondaryPage ? (
       <div className={styles.right}>
-        <div className={styles.social}>
-          <a className={styles.socialButton} target="_blank" href="https://www.instagram.com/karstenbuckstegge/">
-            <Icon className={styles.socialIcon} icon="instagram" />
-          </a>
-          <a className={styles.socialButton} target="_blank" href="https://www.behance.net/karstenbuckstegge/">
-            <Icon className={styles.socialIcon} icon="behance" />
-          </a>
-          <a className={styles.socialButton} target="_blank" href="https://www.github.com/karstenbuckstegge/">
-            <Icon className={styles.socialIcon} icon="github" />
-          </a>
-          <a className={styles.socialButton} target="_blank" href="https://www.linkedin.com/in/karstenbuckstegge/">
-            <Icon className={styles.socialIcon} icon="linkedin" />
-          </a>
-          <a className={styles.socialButton} target="_blank" href="https://www.xing.com/profile/Karsten_Buckstegge/">
-            <Icon className={styles.socialIcon} icon="xing" />
-          </a>
-        </div>
+        <SocialButtonsComponent />
         <LinkButton
+          className={styles.homeButton}
           internal={true}
           href="/"
-          className={styles.backButton}
           color="green"
           size="small"
           direction={props.pageTransitionDirection}
         >
-          Back to MainPage
+          <div className={styles.homeContent}>
+            Back Home
+            <Icon className={styles.homeIcon} icon="arrow" />
+          </div>
         </LinkButton>
       </div>
     ) : (

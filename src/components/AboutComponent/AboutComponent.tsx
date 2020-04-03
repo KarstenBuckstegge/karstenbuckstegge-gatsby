@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { Headline } from '../../patterns/Headline/Headline';
 import { LinkButton } from '../../patterns/LinkButton/LinkButton';
 import { ObfuscatedLinkButton } from '../../patterns/ObfuscatedLinkButton/ObfuscatedLinkButton';
+import { SocialButtonsComponent } from '../SocialButtonsComponent/SocialButtonsComponent';
 
 import styles from './aboutComponent.module.scss';
 
@@ -36,6 +37,7 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
         <ObfuscatedLinkButton className={styles.contactButton} size="small" tel="+4915165190124">
           Call me
         </ObfuscatedLinkButton>
+        <SocialButtonsComponent className={styles.socialButtons} />
       </>
     ) : (
       <div className={styles.buttonContainer}>
