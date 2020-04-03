@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import classnames from 'classnames';
 
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import { PageTransition } from '../../containers/PageTransitionContainer';
 import { Icon } from '../../patterns/Icon/Icon';
 
@@ -21,12 +23,12 @@ export const MenuComponent: React.FC<Props> = props => (
       <PageTransition title="Portfolio" to="/portfolio/" direction="right" className={classnames(styles.link, styles.portfolio)}>
         <li className={styles.text}>portfolio</li>
       </PageTransition>
-      <a title="Über mich" href="/#aboutSection" className={classnames(styles.link, styles.about)}>
+      <AnchorLink title="Über mich" href="#aboutSection" className={classnames(styles.link, styles.about)}>
         <li className={styles.text}>about me</li>
-      </a>
-      <a title="Kontakt" href="/#contactSection" className={classnames(styles.link, styles.contact)}>
+      </AnchorLink>
+      <AnchorLink title="Kontakt" href="#contactSection" className={classnames(styles.link, styles.contact)}>
         <li className={styles.text}>contact</li>
-      </a>
+      </AnchorLink>
     </ul>
 
     <div className={styles.bubbles}>
@@ -35,16 +37,16 @@ export const MenuComponent: React.FC<Props> = props => (
         <Bubble_1 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="portfolio" />
       </PageTransition>
-      <a title="Über mich" href="/#aboutSection" className={classnames(styles.bubble, styles.about)}>
+      <AnchorLink title="Über mich" href="#aboutSection" className={classnames(styles.bubble, styles.about)}>
         <Bubble_2 className={styles.bubbleBackground} />
         <Bubble_2 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="home" />
-      </a>
-      <a title="Kontakt" href="/#contactSection" className={classnames(styles.bubble, styles.contact)}>
+      </AnchorLink>
+      <AnchorLink title="Kontakt" href="#contactSection" className={classnames(styles.bubble, styles.contact)}>
         <Bubble_3 className={styles.bubbleBackground} />
         <Bubble_3 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="mail" />
-      </a>
+      </AnchorLink>
     </div>
   </div>
 );
