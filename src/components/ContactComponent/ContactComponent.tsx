@@ -32,7 +32,7 @@ export const ContactComponent: React.StatelessComponent<Props> = props => (
         <Icon icon="instagram" />
         Instagram
       </LinkButton>
-      <LinkButton className={styles.button} color="behance" href="https://www.behance.com/karstenbuckstegge/">
+      <LinkButton className={styles.button} color="behance" href="https://www.behance.net/karstenbuckstegge/">
         <Icon icon="behance" />
         behance
       </LinkButton>
