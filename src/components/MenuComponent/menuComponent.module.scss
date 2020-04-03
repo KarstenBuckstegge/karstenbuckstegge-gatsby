@@ -89,7 +89,6 @@ $bubbleSize: $base * 20;
         animation: push .4s ease;
 
         & .bubbleBackgroundPulse {
-            position: absolute;
             display: block;
             width: 100%;
             height: 100%;
@@ -109,6 +108,10 @@ $bubbleSize: $base * 20;
     position: absolute;
     width: 100%;
     z-index: 1;
+}
+
+.bubbleBackgroundPulse {
+    position: absolute;
 }
 
 .icon {

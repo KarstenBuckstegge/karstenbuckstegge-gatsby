@@ -15,7 +15,10 @@
         transition: fill .8s ease;
     }
 
+    &:focus,
     &:hover {
+        outline: none;
+
         .logo path {
             fill: transparent;
             stroke-dasharray: 700;

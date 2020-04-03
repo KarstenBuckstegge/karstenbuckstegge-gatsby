@@ -103,7 +103,10 @@ $gridGutter: $base * 15;
         }
     }
 
+    &:focus,
     &:hover {
+        outline: none;
+
         &::before {
             opacity: 1;
         }

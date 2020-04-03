@@ -44,8 +44,8 @@ export const ProjectComponent = (props: Props) => {
   };
 
   return (
-    <li className={classnames(styles.project, typeStyles())} tabIndex={1}>
-      <a className={styles.imageWrapper} href={links.behance} target="_blank">
+    <li className={classnames(styles.project, typeStyles())}>
+      <a className={styles.imageWrapper} href={links.behance} target="_blank" tabIndex={1}>
         <View className={styles.viewIcon} />
         <img className={styles.image} src={`https:${image.file.url}`} alt={image.title} />
       </a>
@@ -65,7 +65,7 @@ export const ProjectComponent = (props: Props) => {
             }
 
             return (
-              <LinkButton className={styles.link} key={link} href={links[link]} color={link} target="_blank">
+              <LinkButton tabIndex={1} className={styles.link} key={link} href={links[link]} color={link} target="_blank">
                 {getLinkIcon(link)}
               </LinkButton>
             );
