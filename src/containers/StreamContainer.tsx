@@ -17,7 +17,7 @@ let scrolling = false;
 
 const STREAM_RATIO = 2.28030303030303;
 const STREAM_WIDTH_VW = 0.95;
-const STREAM_MARGIN_TOP = 88;
+const STREAM_MARGIN_TOP = 150;
 
 export class Stream extends React.Component<Props, State> {
   public state: State = {
