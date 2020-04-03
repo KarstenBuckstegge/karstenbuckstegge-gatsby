@@ -2,15 +2,65 @@
 
 $scrollThreshold: 0;
 
+
+
 .stream {
     position: absolute;
     top: $headerHeight;
     left: 0;
     width: $streamWidth;
-    pointer-events: none;
+    // pointer-events: none;
 
     image {
         overflow: visible;
+    }
+}
+
+.easterEgg {
+    cursor: help;
+    opacity: 0;
+    transform-origin: 112% 10%;
+    transform: scale(.5) rotate(4deg) translate(102%, 3%);
+
+    &:hover {
+        animation: easterEgg 3s ease infinite;
+    }
+}
+
+@keyframes easterEgg {
+
+    50%,
+    100% {
+        opacity: 0;
+        transform: scale(.5) rotate(4deg) translate(102%, 3%);
+    }
+
+    60%,
+    65% {
+        opacity: 1;
+        transform: scale(1) rotate(4deg) translate(102%, 3%);
+    }
+
+    68% {
+        opacity: 1;
+        transform: scale(1) rotate(-4deg) translate(102%, 3%);
+    }
+
+    70%,
+    80% {
+        opacity: 1;
+        transform: scale(1) rotate(4deg) translate(102%, 3%);
+    }
+
+    83% {
+        opacity: 1;
+        transform: scale(1) rotate(-4deg) translate(102%, 3%);
+    }
+
+    85%,
+    90% {
+        opacity: 1;
+        transform: scale(1) rotate(4deg) translate(102%, 3%);
     }
 }
 

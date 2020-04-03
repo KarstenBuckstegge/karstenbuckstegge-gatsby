@@ -15,6 +15,8 @@ import top_lights from './images/top_lights.png';
 import top_outlines from './images/top_outlines.png';
 import top_shadows from './images/top_shadows.png';
 
+import me_face from '../../../static/me_face.png';
+
 import styles from './streamComponent.module.scss';
 
 interface Props {
@@ -1776,6 +1778,7 @@ export class StreamComponent extends React.Component<Props, State> {
             />
           </g>
         </g>
+        <image width="1200" height="1200" xlinkHref={me_face} className={styles.easterEgg} />
       </svg>
     );
   }
