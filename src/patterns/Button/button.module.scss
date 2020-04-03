@@ -4,6 +4,7 @@ $xing: #026466;
 $linkedIn: #0077b5;
 $behance: #1769ff;
 $instagram: #fd1d1d;
+$github: #333;
 $web: $grey;
 
 .button {
@@ -22,6 +23,10 @@ $web: $grey;
     box-shadow: none;
 
     .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         transition: color $transition;
     }
 
@@ -98,6 +103,10 @@ $web: $grey;
 
 .instagram {
     color: $instagram;
+}
+
+.github {
+    color: $github;
 }
 
 .web {

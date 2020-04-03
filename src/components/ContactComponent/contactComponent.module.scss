@@ -1,9 +1,17 @@
 @import '../../styles/constants';
 
+.buttons {
+    &+& {
+        margin-top: $base * 4;
+    }
+}
+
 .button {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    width: $base * 30;
+    height: $base * 30;
 
     &+& {
         margin-left: $base * 4;

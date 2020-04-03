@@ -6,6 +6,7 @@ import BehanceIcon from '../../../svg/icons/behance.svg';
 import DesignIcon from '../../../svg/icons/design.svg';
 import DevelopmentIcon from '../../../svg/icons/dev.svg';
 import ExperimentalIcon from '../../../svg/icons/experimental.svg';
+import GithubIcon from '../../../svg/icons/github.svg';
 import HomeIcon from '../../../svg/icons/home.svg';
 import IllustrationIcon from '../../../svg/icons/illustration.svg';
 import InstagramIcon from '../../../svg/icons/instagram.svg';
@@ -33,7 +34,8 @@ type Icon =
   | 'home'
   | 'portfolio'
   | 'mail'
-  | 'web';
+  | 'web'
+  | 'github';
 
 type Components = {
   [key in Icon]: React.FC;
@@ -49,6 +51,7 @@ const components: Components = {
   design: DesignIcon,
   development: DevelopmentIcon,
   experimental: ExperimentalIcon,
+  github: GithubIcon,
   home: HomeIcon,
   illustration: IllustrationIcon,
   instagram: InstagramIcon,
