@@ -21,10 +21,10 @@ $bubbleSize: $base * 20;
 }
 
 .about {
-    color: $blue;
+    color: $pink;
 
     &:hover {
-        color: darken($blue, 10);
+        color: darken($pink, 10);
     }
 }
 
@@ -43,7 +43,7 @@ $bubbleSize: $base * 20;
     transition: color $transition .4s;
 
     &+& {
-        margin-left: $base * 15;
+        margin-left: $base * 5;
     }
 }
 

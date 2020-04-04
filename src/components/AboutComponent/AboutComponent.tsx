@@ -18,7 +18,7 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
   <section className={classnames(props.className, styles.about)} id="aboutSection">
     <Headline size="h3">Hi, my name is Karsten!</Headline>
     <p className={styles.p}>
-      After being a <span className={styles.green}>professional frontend developer</span> for 5 years, I decided to take on new paths and
+      After being a <span className={styles.green}>professional frontend developer</span> for 5+ years, I decided to take on new paths and
       combine my technical knowledge with my creative side projects as an <span className={styles.pink}>illustrator and mural artist</span>.
       <br />
       <br />
@@ -44,7 +44,7 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
         <LinkButton internal={true} href="/portfolio/" type="button" color="green" className={styles.portfolio}>
           visit my portfolio
         </LinkButton>
-        <LinkButton href="/#contactSection" color="grey" className={styles.contact}>
+        <LinkButton anchor={true} href="#contactSection" color="grey" className={styles.contact}>
           contact me
         </LinkButton>
       </div>
