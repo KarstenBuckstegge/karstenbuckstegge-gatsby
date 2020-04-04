@@ -43,6 +43,12 @@ module.exports = {
                 }
             }
         },
+        {
+            resolve: `gatsby-plugin-favicon`,
+            options: {
+                logo: "./static/favicon.png",
+            }
+        },
         "gatsby-plugin-tslint",
         "gatsby-plugin-sass"
     ]
