@@ -12,11 +12,13 @@
     "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
+    "@types/react-helmet": "^5.0.15",
     "@types/react-resize-detector": "^4.0.2",
     "classnames": "^2.2.6",
     "dotenv": "^8.0.0",
     "gatsby": "2.17.2",
     "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-transition-link": "^1.16.2",
@@ -30,6 +32,7 @@
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-masonry-component": "^6.2.1",
     "react-obfuscate": "^3.6.2",
     "react-resize-detector": "^4.2.1",
