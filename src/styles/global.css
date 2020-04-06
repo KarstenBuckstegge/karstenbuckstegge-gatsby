@@ -22,3 +22,9 @@ body {
         font-size: 16px;
     }
 }
+
+.impressum h1,
+.impressum h2,
+.impressum h3 {
+    margin: 16px 0 8px;
+}
