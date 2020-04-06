@@ -74,7 +74,7 @@ class PortfolioContainer extends React.Component<PortfolioProps, {}> {
           <meta name="title" content="Karsten Buckstegge - Visual Artist" />
           <meta
             name="description"
-            content="Illustrator, Mural Artist and Web Developer based in Hamburg, Germany. Let me help you create the perfect visual representation on any medium."
+            content="Illustrator, Mural Artist und Frontend Developer aus Hamburg. Ich helfe dir die perfekte Visualisierung für dein Projekt zu erschaffen!"
           />
 
           <meta property="og:type" content="website" />
@@ -82,7 +82,7 @@ class PortfolioContainer extends React.Component<PortfolioProps, {}> {
           <meta property="og:title" content="Karsten Buckstegge - Visual Artist" />
           <meta
             property="og:description"
-            content="Illustrator, Mural Artist and Web Developer based in Hamburg, Germany. Let me help you create the perfect visual representation on any medium."
+            content="Illustrator, Mural Artist und Frontend Developer aus Hamburg. Ich helfe dir die perfekte Visualisierung für dein Projekt zu erschaffen!"
           />
           <meta property="og:image" content="" />
 
@@ -91,7 +91,7 @@ class PortfolioContainer extends React.Component<PortfolioProps, {}> {
           <meta property="twitter:title" content="Karsten Buckstegge - Visual Artist" />
           <meta
             property="twitter:description"
-            content="Illustrator, Mural Artist and Web Developer based in Hamburg, Germany. Let me help you create the perfect visual representation on any medium."
+            content="Illustrator, Mural Artist und Frontend Developer aus Hamburg. Ich helfe dir die perfekte Visualisierung für dein Projekt zu erschaffen!"
           />
           <meta property="twitter:image" content="" />
         </Helmet>

@@ -22,13 +22,13 @@ export const MenuComponent: React.FC<Props> = props => (
   <div className={classnames({ [styles.offset]: props.headerOffScreen })}>
     <div className={styles.links}>
       <LinkButton className={styles.link} internal={true} href="/portfolio/" color="green" size="small" direction="right">
-        portfolio
+        Portfolio
       </LinkButton>
       <LinkButton className={styles.link} anchor={true} href="#aboutSection" color="pink" size="small">
-        about me
+        Über mich
       </LinkButton>
       <LinkButton className={styles.link} anchor={true} href="#contactSection" color="grey" size="small">
-        contact
+        Kontakt
       </LinkButton>
     </div>
 
@@ -38,12 +38,12 @@ export const MenuComponent: React.FC<Props> = props => (
         <Bubble_1 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="portfolio" />
       </PageTransition>
-      <AnchorLink title="about me" href="#aboutSection" className={classnames(styles.bubble, styles.about)}>
+      <AnchorLink title="Über mich" href="#aboutSection" className={classnames(styles.bubble, styles.about)}>
         <Bubble_2 className={styles.bubbleBackground} />
         <Bubble_2 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="home" />
       </AnchorLink>
-      <AnchorLink title="contact" href="#contactSection" className={classnames(styles.bubble, styles.contact)}>
+      <AnchorLink title="Kontakt" href="#contactSection" className={classnames(styles.bubble, styles.contact)}>
         <Bubble_3 className={styles.bubbleBackground} />
         <Bubble_3 className={styles.bubbleBackgroundPulse} />
         <Icon className={styles.icon} icon="mail" />

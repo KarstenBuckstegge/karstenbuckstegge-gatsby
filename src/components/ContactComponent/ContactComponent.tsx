@@ -13,7 +13,7 @@ interface Props {
 
 export const ContactComponent: React.StatelessComponent<Props> = props => (
   <section className={props.className} id="contactSection">
-    <Headline size="h3">Talk to me...</Headline>
+    <Headline size="h3">Kontakt</Headline>
     <div className={styles.buttons}>
       <ObfuscatedLinkButton className={styles.button} email="hallo@karstenbuckstegge.de">
         Email

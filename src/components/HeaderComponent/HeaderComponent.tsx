@@ -30,7 +30,7 @@ export const HeaderComponent: React.StatelessComponent<Props> = props => (
           direction={props.pageTransitionDirection}
         >
           <div className={styles.homeContent}>
-            Back Home
+            Home
             <Icon className={styles.homeIcon} icon="arrow" />
           </div>
         </LinkButton>
