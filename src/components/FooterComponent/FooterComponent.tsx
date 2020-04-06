@@ -6,11 +6,11 @@ import styles from './footerComponent.module.scss';
 
 export const FooterComponent: React.FC = () => (
   <footer className={styles.footer}>
-    <span>&copy; Karsten Buckstegge 2019</span>
+    <span>&copy; Karsten Buckstegge 2020</span>
     <span className={styles.links}>
-      <PageTransition className={styles.link} to="/privacy/">
+      {/* <PageTransition className={styles.link} to="/privacy/">
         Datenschutz
-      </PageTransition>
+      </PageTransition> */}
       <PageTransition className={styles.link} to="/impressum/">
         Impressum
       </PageTransition>
