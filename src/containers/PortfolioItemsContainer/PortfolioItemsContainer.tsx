@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import classnames from 'classnames';
 import Masonry from 'react-masonry-component';
 import ReactResizeDetector from 'react-resize-detector';
 
@@ -7,6 +8,7 @@ import { AboutComponent } from '../../components/AboutComponent/AboutComponent';
 import { PortfolioFiltersComponent } from '../../components/PortfolioFiltersComponent/PortfolioFiltersComponent';
 import { ProjectComponent } from '../../components/ProjectComponent/ProjectComponent';
 import { Project, ProjectTypes } from '../../pages/portfolio';
+import { Headline } from '../../patterns/Headline/Headline';
 import { MOBILE_BREAKPOINT } from '../IndexContainer';
 
 import styles from './portfolioItemsContainer.module.scss';
@@ -64,24 +66,33 @@ export class PortfolioItems extends React.Component<Props, State> {
 
   public render() {
     return (
-      <div className={styles.container}>
-        <ReactResizeDetector handleWidth={true} onResize={this.onResize} />
-        <PortfolioFiltersComponent className={styles.filter} onFilterClick={this.onFilterClick} activeFilters={this.state.activeFilters} />
-        <AboutComponent className={styles.about} condensed={true} />
-        <Masonry
-          onImagesLoaded={this.props.onImagesLoaded}
-          className={styles.grid}
-          elementType="ul"
-          options={{
-            fitWidth: true,
-            gutter: this.state.isSmallScreen ? 0 : 45
-          }}
-        >
-          {this.sortItems().map(item => (
-            <ProjectComponent project={item} key={item.node.title} />
-          ))}
-        </Masonry>
-      </div>
+      <>
+        <Headline className={classnames(styles.headline, { [styles.hidden]: this.state.isSmallScreen })} size="h1">
+          PORTFOLIO
+        </Headline>
+        <div className={styles.container}>
+          <ReactResizeDetector handleWidth={true} onResize={this.onResize} />
+          <PortfolioFiltersComponent
+            className={styles.filter}
+            onFilterClick={this.onFilterClick}
+            activeFilters={this.state.activeFilters}
+          />
+          <AboutComponent className={styles.about} condensed={true} />
+          <Masonry
+            onImagesLoaded={this.props.onImagesLoaded}
+            className={styles.grid}
+            elementType="ul"
+            options={{
+              fitWidth: true,
+              gutter: this.state.isSmallScreen ? 0 : 45
+            }}
+          >
+            {this.sortItems().map(item => (
+              <ProjectComponent project={item} key={item.node.title} />
+            ))}
+          </Masonry>
+        </div>
+      </>
     );
   }
 
