@@ -46,7 +46,7 @@ export const LinkButton: React.StatelessComponent<Props> = props => {
   }
 
   return (
-    <a className={classes} href={href} target="_blank">
+    <a className={classes} href={href} target="_blank" rel="noopener">
       <div className={ButtonStyles.content}>{children}</div>
     </a>
   );
