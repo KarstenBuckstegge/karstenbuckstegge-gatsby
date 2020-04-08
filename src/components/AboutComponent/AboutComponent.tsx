@@ -24,7 +24,7 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
       <br />
       <br />
       Mit dieser Kombination bin ich in der Lage deine Idee auf <span className={styles.pink}>einzigartige</span> und{' '}
-      <span className={styles.green}>kreative</span> Weise zu visualisieren. Egal ob auf Leinwand, Display, Wand oder sonstigem Medium.
+      <span className={styles.green}>kreative</span> Weise zu visualisieren. Egal ob auf Leinwand, Display, Mauer oder sonstigem Medium.
       <br />
       Die Möglichkeiten sind grenzenlos.
       <br />
