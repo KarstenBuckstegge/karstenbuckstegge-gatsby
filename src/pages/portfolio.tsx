@@ -9,6 +9,7 @@ export interface Links {
   behance: string;
   instagram: string;
   web: string;
+  github: string;
 }
 
 export type ProjectTypes = 'illustration' | 'development' | 'mural' | 'experimental' | 'design';
@@ -56,6 +57,7 @@ export const portfolioContainerQuery = graphql`
             behance
             instagram
             web
+            github
           }
         }
       }

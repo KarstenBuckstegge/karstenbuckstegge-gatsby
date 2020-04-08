@@ -11,7 +11,7 @@ import View from '../../../svg/icons/view.svg';
 
 import styles from './projectComponent.module.scss';
 
-type Link = 'behance' | 'instagram' | 'web';
+type Link = 'behance' | 'instagram' | 'web' | 'github';
 
 interface Props {
   project: Project;
@@ -27,7 +27,7 @@ export const ProjectComponent = (props: Props) => {
   };
 
   const getLinkIcon = (link: string) => {
-    if (link === 'instagram' || link === 'behance' || link === 'xing' || link === 'behance' || link === 'web') {
+    if (link === 'instagram' || link === 'behance' || link === 'xing' || link === 'behance' || link === 'web' || link === 'github') {
       // @ts-ignore
       return (
         <Icon className={styles.linkIcon} icon={link}>
