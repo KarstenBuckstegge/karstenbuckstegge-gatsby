@@ -21,8 +21,13 @@ export interface Project {
     info: string;
     createdAt: string;
     image: {
-      file: {
-        url: string;
+      fluid: {
+        src: string;
+        srcSet: string;
+        srcWebp: string;
+        srcSetWebp: string;
+        aspectRatio: number;
+        sizes: string;
       };
       title: string;
     };
@@ -48,8 +53,13 @@ export const portfolioContainerQuery = graphql`
           info
           createdAt
           image {
-            file {
-              url
+            fluid(maxWidth: 1000) {
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              aspectRatio
+              sizes
             }
             title
           }

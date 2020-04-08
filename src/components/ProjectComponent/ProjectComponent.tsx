@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import classnames from 'classnames';
+import Img from 'gatsby-image';
 
 import { Project } from '../../pages/portfolio';
 import { Icon } from '../../patterns/Icon/Icon';
@@ -47,7 +48,7 @@ export const ProjectComponent = (props: Props) => {
     <li className={classnames(styles.project, typeStyles())}>
       <a className={styles.imageWrapper} href={links.behance} target="_blank" tabIndex={1}>
         <View className={styles.viewIcon} />
-        <img className={styles.image} src={`https:${image.file.url}`} alt={image.title} />
+        <Img className={styles.image} key={image.fluid.src} alt={image.title} fluid={image.fluid} />
       </a>
       <div className={styles.description}>
         <div className={styles.indicators}>
