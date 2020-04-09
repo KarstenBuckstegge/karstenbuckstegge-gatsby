@@ -32,8 +32,7 @@ $web: $grey;
         transition: color $transition;
     }
 
-    &::before,
-    &::after {
+    &::before {
         content: '';
         position: absolute;
         display: block;
@@ -48,6 +47,12 @@ $web: $grey;
 
         transition: transform $transition;
         will-change: transform;
+    }
+
+    &:focus:not(.active) {
+        &::before {
+            opacity: .5;
+        }
     }
 
     &:hover,
