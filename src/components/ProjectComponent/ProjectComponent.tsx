@@ -46,7 +46,7 @@ export const ProjectComponent = (props: Props) => {
 
   return (
     <li className={classnames(styles.project, typeStyles())}>
-      <a className={styles.imageWrapper} href={links.behance} target="_blank" tabIndex={1}>
+      <a className={styles.imageWrapper} href={links.behance} target="_blank" rel="noopener" tabIndex={1}>
         <View className={styles.viewIcon} />
         <Img className={styles.image} key={image.fluid.src} alt={image.title} fluid={image.fluid} />
       </a>
