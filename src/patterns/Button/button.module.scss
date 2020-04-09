@@ -17,6 +17,7 @@ $web: $grey;
     font-weight: 400;
     cursor: pointer;
     overflow: hidden;
+    z-index: 1;
 
     transition: color $transition;
 
