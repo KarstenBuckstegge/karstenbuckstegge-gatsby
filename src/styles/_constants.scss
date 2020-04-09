@@ -36,6 +36,7 @@ $transition: .4s ease;
 $streamWidth: 95vw;
 
 $breakpointSmall: 1050px;
+$breakpointBig: 2400px;
 
 // MOBILE
 $m_layoutPadding: $base * 3;
@@ -47,3 +48,10 @@ $m_fontSizeBase: 16px;
 $m_fontSizeL: 18px;
 $m_fontSizeXL: 22px;
 $m_fontSizeXXL: 30px;
+
+// BIG ASS SCREENS
+$h_fontSizeS: 16px;
+$h_fontSizeBase: 20px;
+$h_fontSizeL: 40px;
+$h_fontSizeXL: 60px;
+$h_fontSizeXXL: 80px;

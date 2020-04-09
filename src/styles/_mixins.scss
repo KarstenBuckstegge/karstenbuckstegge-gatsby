@@ -11,3 +11,9 @@
         @content;
     }
 }
+
+@mixin mediaHuge {
+    @media (min-width: $breakpointBig + 1px) {
+        @content;
+    }
+}

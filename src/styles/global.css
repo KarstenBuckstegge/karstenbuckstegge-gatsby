@@ -23,6 +23,12 @@ body {
     }
 }
 
+@media (min-width: 2400px) {
+    body {
+        font-size: 20px;
+    }
+}
+
 .impressum h1,
 .impressum h2,
 .impressum h3 {

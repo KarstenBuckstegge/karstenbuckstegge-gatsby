@@ -10,6 +10,10 @@
     @include mediaSmall {
         font-size: $m_fontSizeXXL;
     }
+
+    @include mediaHuge {
+        font-size: $h_fontSizeXXL;
+    }
 }
 
 .h2 {
@@ -20,6 +24,10 @@
     @include mediaSmall {
         font-size: $m_fontSizeL;
     }
+
+    @include mediaHuge {
+        font-size: $h_fontSizeL;
+    }
 }
 
 .h3 {
@@ -29,5 +37,9 @@
 
     @include mediaSmall {
         font-size: $m_fontSizeXL;
+    }
+
+    @include mediaHuge {
+        font-size: $h_fontSizeXL;
     }
 }
