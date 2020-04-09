@@ -9,44 +9,12 @@
     height: 48vw;
 }
 
+.title {
+    margin-top: -3vw;
+    line-height: 1.7em;
+}
+
 .hr {
     width: 50%;
     color: $green;
-}
-
-.names {
-    line-height: 4em;
-}
-
-.firstName {
-    padding: 0 10%;
-}
-
-.letter {
-    display: inline-block;
-    margin: 0;
-    transform: translateY(0);
-    transition: transform 1s, margin 1s;
-}
-
-.title {
-    margin-top: -3vw;
-
-    &:hover {
-        .letter {
-            margin: 0 1.5vw;
-        }
-
-        @for $i from 1 to 7 {
-            .firstNameLetter#{$i} {
-                transform: translateY(#{(random(30) - 15) / 10}em);
-            }
-        }
-
-        @for $i from 1 to 9 {
-            .lastNameLetter#{$i} {
-                transform: translateY(#{(random(30) - 15) / 10}em);
-            }
-        }
-    }
 }
