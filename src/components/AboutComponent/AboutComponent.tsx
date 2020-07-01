@@ -9,6 +9,8 @@ import { SocialButtonsComponent } from '../SocialButtonsComponent/SocialButtonsC
 
 import styles from './aboutComponent.module.scss';
 
+import CV from '../../../static/Lebenslauf_KarstenBuckstegge_2020.pdf';
+
 interface Props {
   condensed?: boolean;
   className?: string;
@@ -42,6 +44,9 @@ export const AboutComponent: React.StatelessComponent<Props> = props => (
         <ObfuscatedLinkButton className={styles.contactButton} size="small" tel="+4915165190124">
           Anrufen
         </ObfuscatedLinkButton>
+        <LinkButton href={CV} color="grey" size="small" className={styles.contactButton}>
+          Lebenslauf herunterladen
+        </LinkButton>
         <SocialButtonsComponent className={styles.socialButtons} />
       </>
     ) : (
