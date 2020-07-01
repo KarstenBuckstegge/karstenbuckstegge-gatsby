@@ -7,6 +7,8 @@ import { ObfuscatedLinkButton } from '../../patterns/ObfuscatedLinkButton/Obfusc
 
 import styles from './contactComponent.module.scss';
 
+import CV from '../../../static/Lebenslauf_KarstenBuckstegge_2020.pdf';
+
 interface Props {
   className?: string;
 }
@@ -39,6 +41,11 @@ export const ContactComponent: React.StatelessComponent<Props> = props => (
       <LinkButton className={styles.button} color="github" href="https://www.github.com/karstenbuckstegge/">
         <Icon icon="github" />
         github
+      </LinkButton>
+    </div>
+    <div className={styles.buttons}>
+      <LinkButton href={CV} color="pink">
+        Lebenslauf herunterladen
       </LinkButton>
     </div>
   </section>
