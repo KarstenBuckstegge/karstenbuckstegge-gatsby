@@ -19,7 +19,7 @@ export const IntroComponent: React.StatelessComponent<Props> = props => {
         <HR className={styles.hr} />
         <div>BUCKSTEGGE</div>
       </Headline>
-      <Headline size="h2">Visual Artist</Headline>
+      <Headline size="h2">Frontend Developer &amp; Illustrator</Headline>
     </section>
   );
 };
