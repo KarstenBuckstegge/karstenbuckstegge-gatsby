@@ -31,7 +31,22 @@ const isExiting = (state: transitionState) => {
   return state === 'exited' || state === 'exiting';
 };
 
-export const LayoutComponent: React.StatelessComponent<Props> = ({ secondaryPage, children, loading, pageTransitionDirection }) => {
+export const LayoutComponent: React.FC<Props> = ({ secondaryPage, children, loading, pageTransitionDirection }) => {
+  const [isLoading, setIsLoading] = React.useState(loading);
+
+  // Remove loading screen after a while if something didn't work (e.g. Safari < V12)
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 10000);
+  }, []);
+
+  React.useEffect(() => {
+    if (!loading) {
+      setIsLoading(false);
+    }
+  }, [loading]);
+
   return (
     <TransitionState>
       {(transitionStatus: TransitionStatus) => (
@@ -41,9 +56,9 @@ export const LayoutComponent: React.StatelessComponent<Props> = ({ secondaryPage
             [styles.hidden]: isExiting(transitionStatus.transitionStatus)
           })}
         >
-          <Loading className={classnames({ [styles.hidden]: !loading })} />
+          <Loading className={classnames({ [styles.hidden]: !isLoading })} />
 
-          <div className={classnames(styles.content, { [styles.hidden]: loading })}>
+          <div className={classnames(styles.content, { [styles.hidden]: isLoading })}>
             <div className={styles.grain} />
             <Header secondaryPage={secondaryPage} pageTransitionDirection={pageTransitionDirection} />
             {children}
