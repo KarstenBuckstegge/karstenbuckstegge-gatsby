@@ -11,9 +11,9 @@ export const ImpressumComponent: React.FC = () => (
         <br />
         Visual Artist
         <br />
-        Bahrenfelder Steindamm 54
+        N3, 11
         <br />
-        22761 Hamburg
+        68161 Mannheim
       </p>
       <h2>Kontakt</h2>
       <p>
